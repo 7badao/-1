@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>
+    // 版本号 - 每次更新HTML时修改这个值
+    var PAGE_VERSION = '20260126';
+    var storageKey = 'privacy_page_version';
+    var savedVersion = localStorage.getItem(storageKey);
+    if (savedVersion && savedVersion !== PAGE_VERSION) {
+      localStorage.setItem(storageKey, PAGE_VERSION);
+      location.reload(true);
+    } else if (!savedVersion) {
+      localStorage.setItem(storageKey, PAGE_VERSION);
+    }
+  </script>
+  <title>BMostChat - 隐私政策</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a73e8, #6c8ef5);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .logo-icon {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .update-info {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .lang-btn {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .lang-btn:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .lang-btn.active {
+      background-color: white;
+      color: #1a73e8;
+    }
+
+    .content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .toc {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      border-left: 4px solid #1a73e8;
+    }
+
+    .toc h2 {
+      margin-bottom: 15px;
+      color: #1a73e8;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    .toc ul {
+      list-style-type: none;
+      column-count: 2;
+    }
+
+    .toc li {
+      margin-bottom: 8px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .toc li:before {
+      content: "•";
+      color: #1a73e8;
+      position: absolute;
+      left: 0;
+    }
+
+    .toc a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: #1a73e8;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #1a73e8;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .section h3 {
+      color: #333;
+      margin: 20px 0 10px;
+      font-size: 1.1em;
+    }
+
+    .section h4 {
+      color: #333;
+      margin: 15px 0 8px;
+      font-size: 1em;
+    }
+
+    .section p {
+      margin-bottom: 15px;
+    }
+
+    .section ul,
+    .section ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    .subsection {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .subsection-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #1a73e8;
+      margin: 15px 0;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .mark {
+      font-weight: bold;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1a73e8;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top:hover {
+      background-color: #0d5bb9;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #666;
+      font-size: 14px;
+      border-top: 1px solid #eaeaea;
+    }
+
+    /* 语言切换相关样式 */
+    .lang-zh,
+    .lang-en {
+      display: none;
+    }
+
+    .lang-zh.active,
+    .lang-en.active {
+      display: block;
+    }
+
+    .contact-info {
+      background: #e8f0fe;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .contact-info h3 {
+      color: #1a73e8;
+      margin-bottom: 15px;
+    }
+
+    .newTitle {
+      text-align: center;
+    }
+
+    .newflex {
+      display: flex;
+    }
+
+    .newNum {
+      width: 30px;
+    }
+
+    .newDiv {
+      flex: 1;
+    }
+
+    .newString {
+      width: 300px;
+    }
+
+    .newLi {
+      list-style-type: none;
+    }
+
+    .no-bullet {
+      list-style-type: none;
+      margin-left: 0 !important;
+      /* padding-left: 20px; */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .toc ul {
+        column-count: 1;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .content {
+        padding: 20px 15px;
+      }
+
+      header {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .language-switcher {
+        position: static;
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section h2 {
+        font-size: 20px;
+      }
+
+      .section h3 {
+        font-size: 18px;
+      }
+    }
+
+    /* SDK表格样式 */
+    .sdk-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .sdk-table thead {
+      background: linear-gradient(135deg, #1a73e8, #6c8ef5);
+      color: white;
+    }
+
+    .sdk-table th {
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .sdk-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+
+    .sdk-table tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    .sdk-table tbody tr:hover {
+      background-color: #e8f0fe;
+    }
+
+    .sdk-table a {
+      color: #1a73e8;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .sdk-table a:hover {
+      text-decoration: underline;
+    }
+
+    .sdk-section-title {
+      background-color: #f0f4f8;
+      font-weight: bold;
+      color: #1a73e8;
+    }
+
+    .sdk-section-title td {
+      padding: 10px 15px;
+      border-bottom: 2px solid #1a73e8;
+    }
+
+    @media (max-width: 768px) {
+      .sdk-table {
+        font-size: 12px;
+      }
+
+      .sdk-table th,
+      .sdk-table td {
+        padding: 8px 10px;
+      }
+
+      .sdk-table-wrapper {
+        overflow-x: auto;
+      }
+
+      /* H5移动端表格卡片式布局 */
+      .sdk-table thead {
+        display: none;
+      }
+
+      .sdk-table,
+      .sdk-table tbody,
+      .sdk-table tr,
+      .sdk-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .sdk-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .sdk-table tr.sdk-section-title {
+        background: linear-gradient(135deg, #1a73e8, #6c8ef5);
+        margin-top: 20px;
+      }
+
+      .sdk-table tr.sdk-section-title td {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px;
+      }
+
+      .sdk-table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 40%;
+        text-align: left;
+        min-height: 40px;
+      }
+
+      .sdk-table td:last-child {
+        border-bottom: none;
+      }
+
+      .sdk-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        width: 35%;
+        font-weight: 600;
+        color: #1a73e8;
+        font-size: 11px;
+      }
+
+      .sdk-table tr.sdk-section-title td::before {
+        display: none;
+      }
+
+      .sdk-table tr.sdk-section-title td {
+        padding-left: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">🔒</div>
+        <h1 class="lang-zh active">BMostChat - 隐私政策</h1>
+        <h1 class="lang-en">BMostChat Privacy Policy</h1>
+      </div>
+      <p class="lang-zh active">
+        本隐私政策（以下简称"本政策"）适用于燕加隆家居建材股份有限公司（以下简称"燕加隆"或"我们"）提供的"BMostChat"移动应用、网站、软件及相关服务（以下统称为"本应用"或"服务"）。</p>
+      <!-- <p class="lang-en">This Privacy Policy explains how we collect, use, disclose, and protect your Personal Data when you use our Services.</p> -->
+      <div class="update-info">
+        <span class="lang-zh active"><strong>更新日期:</strong> 2026年1月26日 | <strong>生效日期:</strong> 2025年10月23日</span>
+        <span class="lang-en"><strong>Last Updated:</strong> January 26, 2026 | <strong>Effective Date:</strong> October
+          23, 2025</span>
+      </div>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="zh">中文</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="section lang-en">
+        <p>
+          This Privacy Policy explains how <strong>YEKALON INDUSTRY INC.</strong> (also referred to in Chinese as
+          <strong>燕加隆家居建材股份有限公司</strong>, "<strong>Yekalon</strong>", "<strong>we</strong>", "<strong>us</strong>", or
+          "<strong>our</strong>") collects, uses, discloses, and protects Personal Data when you use the
+          <strong>BMostChat</strong> mobile application, website, software, and related services (collectively, the
+          "<strong>App</strong>" or "<strong>Services</strong>").
+        </p>
+      </div>
+
+      <div class="section lang-en">
+        <p>Please read this Policy carefully before accessing the BMostChat platform or using our Services. By checking
+          or clicking “I have read and agree to the BMostChat User Service Agreement and BMostChat Privacy Policy”, or
+          by actually accessing, browsing, or using any of the Services, you acknowledge that you have read, understood,
+          and agreed to this Policy. If you do not agree, please do not access or use the Services. If we update this
+          Policy, your continued use of the Services after notice of changes constitutes your acceptance of the updated
+          Policy.</p>
+      </div>
+
+      <div class="section lang-en">
+        <p>This Privacy Policy helps you understand the following:</p>
+      </div>
+
+      <div class="toc">
+        <h2 class="lang-zh active">隐私政策目录</h2>
+        <!-- <h2 class="lang-en">Privacy Policy Table of Contents</h2> -->
+        <ul>
+          <li class="lang-zh active"><a href="#privacy-applicability">I. 政策适用性</a></li>
+          <li class="lang-en"><a href="#privacy-applicability">I. Policy Applicability</a></li>
+          <li class="lang-zh active"><a href="#privacy-definitions">II. 定义和范围</a></li>
+          <li class="lang-en"><a href="#privacy-definitions">II. Definitions and Scope</a></li>
+          <li class="lang-zh active"><a href="#privacy-auto-start">III. 自动启动和关联启动</a></li>
+          <li class="lang-en"><a href="#privacy-auto-start">III. Auto-Start and Associated Start</a></li>
+          <li class="lang-zh active"><a href="#privacy-collect">IV. 我们如何收集和使用您的信息</a></li>
+          <li class="lang-en"><a href="#privacy-collect">IV. How We Collect and Use Your Information</a></li>
+          <li class="lang-zh active"><a href="#privacy-cookies">V. 我们如何使用Cookie和类似技术</a></li>
+          <li class="lang-en"><a href="#privacy-cookies">V. How We Use Cookies and Similar Technologies</a></li>
+          <li class="lang-zh active"><a href="#privacy-share">VI. 我们如何共享、转让和公开披露个人信息</a></li>
+          <li class="lang-en"><a href="#privacy-share">VI. How We Share, Transfer, and Publicly Disclose Personal
+              Information</a></li>
+          <li class="lang-zh active"><a href="#privacy-security">VII. 我们如何保护信息安全</a></li>
+          <li class="lang-en"><a href="#privacy-security">VII. How We Protect Information Security</a></li>
+          <li class="lang-zh active"><a href="#privacy-manage">VIII. 您如何管理个人信息</a></li>
+          <li class="lang-en"><a href="#privacy-manage">VIII. How You Can Manage Personal Information</a></li>
+          <li class="lang-zh active"><a href="#privacy-children">IX. 年龄限制和儿童保护</a></li>
+          <li class="lang-en"><a href="#privacy-children">IX. Age Restriction and Children Protection</a></li>
+          <li class="lang-zh active"><a href="#privacy-global">X. 全球数据传输</a></li>
+          <li class="lang-en"><a href="#privacy-global">X. Global Data Transfers</a></li>
+          <li class="lang-zh active"><a href="#privacy-updates">XI. 本隐私政策如何更新</a></li>
+          <li class="lang-en"><a href="#privacy-updates">XI. How This Privacy Policy Is Updated</a></li>
+          <li class="lang-zh active"><a href="#privacy-language">XII. 语言版本和冲突</a></li>
+          <li class="lang-en"><a href="#privacy-language">XII. Language Versions and Conflicts</a></li>
+          <li class="lang-zh active"><a href="#privacy-complaints">XIII. 数据保护官/代表和投诉</a></li>
+          <li class="lang-en"><a href="#privacy-complaints">XIII. Data Protection Officer/Representative and
+              Complaints</a></li>
+          <li class="lang-zh active"><a href="#privacy-contact">XIV. 如何联系我们</a></li>
+          <li class="lang-en"><a href="#privacy-contact">XIV. How to Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="section lang-en" id="privacy-applicability">
+                <h2 class="lang-en">I. Policy Applicability</h2>
+                <h2 class="lang-en">II. Definitions and Scope</h2>
+                <h2 class="lang-en">III. Auto-Start and Associated Start</h2>
+                <h2 class="lang-en">IV.How We Collect and Use Your Information</h2>
+                <h2 class="lang-en">V.How We Use Cookies and Similar Technologies</h2>
+                <h2 class="lang-en">VI.How We Share, Transfer, and Publicly Disclose Personal Information</h2>
+                <h2 class="lang-en">VII.How We Protect Information Security</h2>
+                <h2 class="lang-en">VIII.How You Can Manage Personal Information</h2>
+                <h2 class="lang-en">IX.Age Restriction and Children Protection</h2>
+                <h2 class="lang-en">X.Global Data Transfers</h2>
+                <h2 class="lang-en">XI.How This Privacy Policy Is Updated</h2>
+                <h2 class="lang-en">XII.Language Versions and Conflicts</h2>
+                <h2 class="lang-en">XIII.Data Protection Officer/Representative and Complaints</h2>
+                <h2 class="lang-en">XIV.How to Contact Us</h2>
+             </div> -->
+
+      <div class="section lang-en">
+        <p>YEKALON INDUSTRY INC. ("we", "us", or "our") understands the importance of your personal data and is
+          committed to protecting it in accordance with applicable laws and regulations and industry best practices. We
+          strive to maintain your trust and safeguard your personal data by adhering to the following principles:
+          accountability, purpose limitation, consent and choice, data minimization, security and integrity, individual
+          participation, and openness and transparency. Accordingly, we have developed this Privacy Policy (this
+          “Policy”) to help you fully understand, when you use our products and services, how we collect, use, share,
+          store, and protect your personal data, and how you can manage your personal data.
+          Our products are developed based on DCloud uni-app (5+ App/Wap2App). During App operation, and for the
+          purposes of analytics and improving performance and user experience through analysis of app launch metrics and
+          error logs, the App needs to collect unique device identifiers and related technical information, including
+          (as applicable): device ID, IMEI/Android ID/DEVICE_ID/IDFA, device MAC address, OAID, SSID, SIM card
+          information (ICCID), network information (BSSID), installed software list (application list), and SIM card
+          IMSI information. For details, please refer to the DCloud User Service Agreement at:
+          https://ask.dcloud.net.cn/protocol.html. For users outside Mainland China, the foregoing reference remains
+          unchanged; where the law requires us to disclose our role as a “controller” and/or “processor” or to implement
+          specific cross-border transfer mechanisms (such as the EU Standard Contractual Clauses (SCCs) or the UK
+          International Data Transfer Addendum (IDTA)), we will implement such requirements without changing the
+          original purposes of processing.</p>
+      </div>
+
+
+      <div class="section" id="privacy-applicability">
+        <h2 class="lang-zh active">I. 政策适用性</h2>
+        <h2 class="lang-en">I. Policy Applicability</h2>
+
+        <div class="lang-zh active">
+          <p>
+            本隐私政策是<strong>全球版本</strong>,适用于使用本应用程序产品或服务的所有用户。对于特定国家或地区的法律要求,我们提供<strong>"区域附录/补充条款"（如有）</strong>。如果区域附录与本隐私政策不一致,以区域附录为准;对于其中未涵盖的事项,本隐私政策和适用法律应适用。
+          </p>
+
+          <p>
+            根据服务条款,您的适用服务区域将<strong>主要由您在注册时选择的国家/地区决定</strong>。为确保正确分配服务区域,我们可能会参考设备或网络相关信息（例如IP地址、网络环境数据和设备区域设置）以协助验证。如果我们检测到与注册区域不一致,我们将通过应用内消息或与您的账户关联的电子邮件地址/电话号码向您发送通知,并可能要求您通过我们的支持团队确认信息。
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <p>This Privacy Policy is the <strong>Global Version</strong> and applies to all users who use the products or
+            services of this App. For legal requirements specific to certain countries or regions, we provide a
+            "<strong>Regional Addendum</strong> / <strong>Supplemental Terms" (if any)</strong>. Where the Regional
+            Addendum is inconsistent with this Privacy Policy, the Regional Addendum shall prevail; for matters not
+            covered therein, this Privacy Policy and Applicable Law shall govern.</p>
+
+          <p>Your applicable service region under the User Service Agreement will <strong>primarily be determined by the
+              country/region you select at registration</strong>. To ensure the correct assignment of the service
+            region, we may reference device- or network-related information (for example, IP address, network
+            environment data, and device locale settings) to assist in verification. If we detect any inconsistency with
+            the registered region, we will send you a notice via in-app messaging or to the email address/phone number
+            linked to your account, and we may ask you to confirm the information through our support team.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-definitions">
+        <h2 class="lang-zh active">II. 定义和范围</h2>
+        <h2 class="lang-en">II. Definitions and Scope</h2>
+
+        <div class="lang-zh active">
+          <p>
+            <strong>个人信息/个人数据:</strong>以电子或其他方式记录的信息,能够单独或与其他信息结合识别特定自然人,或反映特定自然人活动的信息,包括但不限于姓名、出生日期、政府颁发的身份证号码、生物识别标识符、地址、联系方式、通信记录和内容、账户凭证、财务信息、信用/信誉信息、位置数据、住宿/住宿信息、健康和生理信息以及交易信息。
+          </p>
+
+          <p>
+            <strong>敏感个人信息:</strong>如果泄露、非法提供或滥用,可能危及人身或财产安全,或可能导致声誉损害、精神/身体健康损害或歧视性待遇的信息,包括但不限于政府颁发的身份证号码、生物识别标识符、银行账户信息、通信记录和内容、财务信息、信用/信誉信息、精确位置数据、住宿/住宿信息、健康和生理信息、交易信息以及儿童的个人信息。
+          </p>
+
+          <p><strong>个人信息处理:</strong>收集、存储、使用、处理、传输、提供、公开披露、删除和其他操作。</p>
+
+          <p><strong>个人信息删除/擦除:</strong>从常规/运营业务系统中删除个人信息,使其无法检索或访问。</p>
+
+          <p><strong>匿名化:</strong>通过不可逆技术处理,使个人信息主体无法被识别或关联,且处理结果不可复原。</p>
+
+          <p><strong>去标识化/假名化:</strong>通过技术处理,使在不借助额外信息的情况下无法识别或关联个人信息主体。</p>
+
+          <p><strong>个人信息主体:</strong>被个人信息所标识或关联的自然人。</p>
+
+          <p><strong>个人信息控制者/处理者:</strong>能够决定个人信息处理目的与方式的组织或个人为控制者;受控制者书面指示开展处理活动的第三方为处理者。</p>
+
+          <p>
+            <strong>设备信息:</strong>包括设备标识符、应用信息（崩溃信息、通知开关状态、应用安装列表及其他应用相关信息）、设备与系统参数（设备类型/型号、操作系统及硬件信息）、网络环境信息（IP地址、Wi-Fi信息、基站信息、其他网络相关信息）、网络信息（BSSID）;以产品实际采集为准。
+          </p>
+
+          <p>
+            <strong>儿童:</strong>指未达到其所在地法律对在线服务处理个人信息所要求的最低同意年龄的自然人;该年龄因法域而异,例如欧盟/EEA由各成员国在13-16周岁间设定、英国与美国为未满13周岁、中国大陆与韩国为未满14周岁、印度为未满18周岁,<strong>若当地规定更高或更严格标准的,从其规定</strong>。
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <p><strong>Personal Information / Personal Data:</strong> information recorded by electronic or other means
+            that can identify a specific natural person on its own or in combination with other information, or that
+            reflects the activities of a specific natural person, including without limitation name, date of birth,
+            government-issued identification number, biometric identifiers, address, contact details, communications
+            records and content, account credentials, financial information, credit/creditworthiness information,
+            location data, accommodation/lodging information, health and physiological information, and transaction
+            information.</p>
+
+          <p><strong>Sensitive Personal Information:</strong> information that, if leaked, unlawfully provided, or
+            misused, may endanger personal or property safety, or is likely to result in reputational harm,
+            mental/physical health damage, or discriminatory treatment, including without limitation government-issued
+            identification numbers, biometric identifiers, bank account information, communications records and content,
+            financial information, credit/creditworthiness information, precise location data, accommodation/lodging
+            information, health and physiological information, transaction information, as well as personal information
+            of children.</p>
+
+          <p><strong>Processing of Personal Information:</strong> collection, storage, use, processing, transmission,
+            provision, public disclosure, deletion, and other operations.</p>
+
+          <p><strong>Deletion / Erasure of Personal Information:</strong> removing personal information from
+            routine/operational business systems so that it cannot be retrieved or accessed.</p>
+
+          <p><strong>Anonymization:</strong> irreversible technical processing that renders the data subject
+            unidentifiable or unrelatable, and the result cannot be restored.</p>
+
+          <p><strong>De-identification / Pseudonymization:</strong> technical processing that prevents identification or
+            association with a data subject without the use of additional information.</p>
+
+          <p><strong>Data Subject:</strong> the natural person who is identified by or associated with the personal
+            information.</p>
+
+          <p><strong>Personal Information Controller / Processor:</strong> an organization or individual that determines
+            the purposes and means of processing personal information is the Controller; a third party that performs
+            processing activities under the Controller’s written instructions is a Processor (e.g., in the EEA/UK and
+            similar jurisdictions).</p>
+
+          <p><strong>Device Information:</strong> includes device identifiers, application information (crash logs,
+            notification toggle status, installed app list, and other app-related information), device and system
+            parameters (device type/model, operating system and hardware information), network environment information
+            (IP address, Wi-Fi information, cell tower/base station information, and other network-related information),
+            and network identifiers (e.g., BSSID); subject to the actual data collected by the product.</p>
+
+          <p><strong>Children:</strong> natural persons who have not reached the minimum age required under the laws of
+            their location for the processing of personal information in connection with online services; the age varies
+            by jurisdiction—for example, in the EU/EEA it is set by Member States between 13–16 years; in the UK and the
+            United States it is under 13; in Mainland China and the Republic of Korea it is under 14; in India it is
+            under 18. Where local law sets a higher or stricter standard, that standard applies.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-auto-start">
+        <h2 class="lang-zh active">III. 自动启动和关联启动</h2>
+        <h2 class="lang-en">III. uto-Start and Associated Start</h2>
+
+        <div class="lang-zh active">
+          <p><strong>1.
+              自动启动和后台接收:</strong>为确保应用程序在关闭或在后台运行时能够继续接收与客户端安装包下载相关的广播消息,应用程序可能会使用自动启动功能,并在特定时间间隔通过系统广播唤醒以自动启动或执行关联启动,以提供必要的功能和服务。
+          </p>
+
+          <p><strong>2. 网络更改监听和更新体验:</strong>为避免不必要的数据使用并提供改进的更新体验,应用程序监听网络状态变化,并结合其自动启动功能,在安装包下载完成后立即提醒您安装。</p>
+
+          <p><strong>3. 同意前查看条款:</strong>在您接受用户协议和本隐私政策之前,如果您点击查看相关条款,我们将在系统浏览器中打开它们,以避免任何第三方SDK在此阶段收集您的个人信息。</p>
+
+          <p><strong>4. 微信分享集成:</strong>本应用集成微信分享;完成分享后返回本应用以显示分享状态时,可能需要重新启动应用。已安装本应用的设备中,您分享的链接可直接唤起应用以便快捷查看。</p>
+
+          <p><strong>5.
+              自启动权限;推送与支付:</strong>本应用集成极光推送（JPush）。为便于您快速查看通知内容,我们可能通过通知唤起并打开应用展示对应内容。本应用集成微信支付;完成支付后返回应用显示支付状态时,可能需要重新启动应用。为确保您可及时接收平台用户发送的消息/留言等,我们可能请求您授权自启动权限,以避免应用被系统在后台过早结束。若您拒绝授权,该类功能将不可用,但不影响基本功能使用。我们将遵循各地区与平台（设备/操作系统）关于后台行为与权限提示的政策与规则。
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <p><strong>1. Auto-start and Background Reception:</strong> To ensure that the App can continue receiving
+            broadcast messages related to client installation package downloads while closed or running in the
+            background, the App may use auto-start capabilities and, at certain intervals, be awakened via system
+            broadcasts to auto-start or perform associated launches to deliver necessary features and services. </p>
+
+          <p><strong>2. Network Change Listening and Update Experience:</strong> To avoid unnecessary data usage and
+            provide an improved update experience, the App listens for network state changes and, together with its
+            auto-start capability, promptly alerts you to install once an installation package has finished downloading.
+          </p>
+
+          <p><strong>3. Viewing Terms Prior to Consent:</strong> Before you accept the User Agreement and this Privacy
+            Policy, if you click to view the relevant terms, we will open them in the system browser to avoid any
+            third-party SDK collecting your personal information at this stage. </p>
+
+          <p><strong>4. WeChat Sharing Integration:</strong> The App integrates WeChat sharing. After completing a
+            share, returning to the App to display the share status may require relaunching the App. On devices where
+            the App is installed, links you share may deep-link to the App for quick viewing.</p>
+
+          <p><strong>5. Auto-Start Permission; Push and Payments:</strong> The App integrates JPush for notifications.
+            To help you quickly view notification content, we may wake and open the App via notifications to display the
+            relevant content. The App integrates WeChat Pay; after completing a payment, returning to the App to display
+            the payment status may require relaunching the App. To ensure you receive platform messages (e.g.,
+            messages/comments) in a timely manner, we may request your authorization for auto-start to avoid the App
+            being terminated prematurely in the background by the system. If you decline authorization, these features
+            will not be available, but basic functions remain unaffected. We will follow regional and platform
+            (device/OS) policies and rules regarding background behavior and permission prompts.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-collect">
+        <h2 class="lang-zh active">IV. 我们如何收集和使用您的信息</h2>
+        <h2 class="lang-en">IV. How We Collect and Use Your Information</h2>
+
+        <div class="lang-zh active">
+          <p>我们在提供产品/服务时,将根据下述目的与规则收集和使用您的个人信息:</p>
+
+          <p><strong>1）基本功能所必需的信息:</strong>为提供核心功能与服务,需要收集一定信息;若您拒绝提供,可能无法正常使用核心功能。</p>
+
+          <p><strong>2）附加功能的可选信息:</strong>对于附加功能,您可自主选择是否授权;拒绝仅会影响该功能或其效果,不影响基本功能使用。</p>
+
+          <div class="highlight">
+            <p class="mark">在特定法域适用的合法性基础（如 EEA/UK/瑞士）:</p>
+            <p>
+              我们将针对每一处理目的依据适用法律采用相应的处理依据,如您的<strong>同意</strong>、<strong>履行合同所必需</strong>、<strong>合法利益</strong>、<strong>遵守法律义务</strong>等。
+            </p>
+          </div>
+
+          <h3>位置相关内容/服务</h3>
+          <p>在您的授权下,我们可能使用与本服务相关的地理位置信息（如精确定位、WLAN
+            接入点、蓝牙和基站、传感器信息）以提供更契合的内容或服务。精确定位属于个人敏感信息;若您拒绝授权,定位准确性可能受影响,但其他功能不受影响。未授权时,我们可能基于网络信息（如
+            IP）对应的城市/区县展示相关内容或服务。<strong>可选功能默认不启用</strong>,除非您主动开启。</p>
+
+          <h3>设备传感器</h3>
+          <p>在您使用应用期间,我们可能使用方向/重力/陀螺仪等传感器用于鉴别是否为真实用户;在使用拍摄功能时,我们可能使用加速度传感器以判定拍摄角度。</p>
+
+          <h3>剪贴板</h3>
+          <p>当您在使用过程中进行复制/粘贴（如短信验证码、手机号、设备 SN
+            等）时,我们可能申请调用剪贴板权限并在<strong>本地</strong>读取所需文字信息;该信息仅在您的设备上处理,<strong>不持久化存储</strong>,亦<strong>不作其他用途</strong>。
+          </p>
+
+          <div class="highlight">
+            <p class="mark">特别提示:</p>
+            <p>上述信息并非所有业务功能运行所必需,但有助于提升服务质量、研发新产品/服务。您可自主选择是否提供,拒绝不会对功能本身的可用性造成不利影响。</p>
+          </div>
+
+          <h3>我们为您提供的各项具体功能场景包括:</h3>
+
+          <h4>1. 帮助您成为我们的用户</h4>
+          <p>
+            为完成创建账号,以便我们为您提供服务,您需提供包括您的手机号码在内的必要信息。注册时,您向我们提供注册所用的手机号码将用于接收短信验证码,我们将通过发送短信验证码来验证您的身份是否有效。注册成功后您可以修改补充您的昵称、性别、生日、头像、实名验证绑定以及您的支付宝账号、微信账号(用于账户提现)等相关信息,这些信息均属于您的"账户信息"。
+          </p>
+
+          <h4>2. 为您提供服务与满足需求</h4>
+          <p>为了向您展示内容或服务,我们会收集和使用您在访问或使用本网站或客户端时的设备信息（包括设备标识符（IMEI、IDFA、Android
+            ID、SIM卡信息ICCID、BSSID、IMSI及其他设备相关信息）、应用信息（应用崩溃信息、通知开关状态、应用安装列表及其他应用相关信息）、设备参数及系统信息（设备类型、设备型号、操作系统及硬件相关信息）,设备网络环境信息(IP地址、WiFi信息、基站信息及其他网络相关信息（BSSID）））、服务日志信息（浏览记录、点击查看记录、搜索查询记录、收藏、关注分享信息、发布信息、以及IP地址、浏览器类型、电信运营商、使用语言、访问日期和时间）、您提交的基础信息（如昵称、性别、手机号）,用来完善您的个人信息。
+          </p>
+
+          <h4>3. 向您提供商品或服务</h4>
+
+          <h5>3.1 您向我们提供的信息</h5>
+          <p>
+            您在注册账户或使用我们的服务时,向我们提供的相关个人信息,例如微信基本信息（昵称、头像、性别）、电话号码等;此外,还包括您通过我们的服务向其他方提供的共享信息,以及您使用我们的服务时所储存的信息。请注意,若您需向本应用提供其他方的前述个人信息,您需确保您已经取得该方的授权同意。
+          </p>
+
+          <h5>3.2 我们在您使用服务过程中收集的信息</h5>
+          <p>为向您提供搜索结果、了解产品适配性、识别账号异常状态,我们会收集关于您使用的服务以及使用方式的信息并将这些信息进行关联,这些信息包括:</p>
+
+          <h5>3.2.1 设备信息:</h5>
+          <p>为了保障应用与服务的安全运行,我们会收集您的设备型号、应用列表（安装列表）、设备名称、设备唯一标识符、登录IP地址、产品版本号、移动网络信息。</p>
+
+          <p>我们将在静默/后台状态中收集您的（设备标识符、设备序列号、Android
+            ID、应用列表、IMEI、IDFA、SSID、SIM卡信息ICCID、MAC、姓名、手机号、位置）、网络信息（BSSID）等信息,用于识别用户的身份信息。</p>
+
+          <h5>3.3.2 服务日志信息:</h5>
+          <p>包括浏览记录、点击查看记录、搜索查询记录、收藏、交易、售后、关注分享信息、发布信息、以及IP地址、浏览器类型、电信运营商、使用语言、访问日期和时间。</p>
+
+          <p>
+            当您使用我们的网站或客户端提供的产品或服务时,我们会自动收集您对我们服务的详细使用情况,作为有关网络日志保存。例如您的搜索查询内容、IP地址、浏览器的类型、电信运营商、使用的语言、访问日期和时间及您访问的网页记录等。
+          </p>
+
+          <div class="highlight">
+            <p class="mark">请注意:</p>
+            <p>
+              单独的设备信息、日志信息等是无法识别特定自然人身份的信息。如果我们将这类非个人信息与其他信息结合用于识别特定自然人身份,或者将其与个人信息结合使用,则在结合使用期间,这类非个人信息将被视为个人信息,除取得您授权或法律法规另有规定外,我们会将该类个人信息做匿名化、去标识化处理。
+            </p>
+          </div>
+
+          <h4>4. 为您提供安全保障</h4>
+          <p>请注意,为确保用户身份真实性、向您提供更好的安全保障,您需要向我们提供身份证等身份信息完成实名认证。如您拒绝提供上述信息,可能无法使用账户管理、继续可能存在风险的交易等服务,但不会影响您使用浏览、购买商品等服务。
+          </p>
+
+          <p>
+            为提高您使用我们及我们关联公司、合作伙伴提供服务的安全性,保护您或其他用户或公众的人身财产安全免遭侵害,更好地预防钓鱼网站、欺诈、网络漏洞、计算机病毒、网络攻击、网络侵入等安全风险,更准确地识别违反法律法规或本应用相关协议规则的情况,我们可能使用或整合您的用户信息、交易信息、设备信息、有关网络日志以及我们关联公司、合作伙伴取得您授权或依据法律共享的信息,来综合判断您账户及交易风险、进行身份验证、检测及防范安全事件,并依法采取必要的记录、审计、分析、处置措施。
+          </p>
+
+          <h4>5. 为您提供收藏、关注与分享功能</h4>
+          <p>
+            在您浏览我们网站或客户端的过程中,您可以选择对商品及/或服务进行收藏、通过我们提供的功能组件向其他第三方分享信息。在您使用上述功能的过程中,我们会收集包括您的收藏及获取优惠券信息的记录、分享历史在内的服务日志信息用于实现上述功能及其他我们明确告知的目的。
+          </p>
+
+          <h4>6. 征得授权同意的例外</h4>
+          <p><strong>根据相关法律法规规定,以下情形中收集您的个人信息无需征得您的授权同意:</strong></p>
+          <ul class="no-bullet">
+            <li><strong>6.1</strong>与个人信息控制者履行法律法规规定的义务相关的;</li>
+            <li><strong>6.2</strong>与国家安全、国防安全直接相关的;</li>
+            <li><strong>6.3</strong>与公共安全、公共卫生、重大公共利益直接相关的;</li>
+            <li><strong>6.4</strong>与刑事侦查、起诉、审判和判决执行等直接相关的;</li>
+            <li><strong>6.5</strong>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的;</li>
+            <li><strong>6.6</strong>所涉及的个人信息是个人信息主体自行向社会公众公开的;</li>
+            <li><strong>6.7</strong>根据个人信息主体要求签订和履行合同所必需的;</li>
+            <li><strong>6.8</strong>从合法公开披露的信息中收集个人信息的,如合法的新闻报道、政府信息公开等渠道;</li>
+            <li><strong>6.9</strong>维护所提供产品或服务的安全稳定运行所必需的,如发现、处置产品或服务的故障;</li>
+            <li><strong>6.10</strong>个人信息控制者为新闻单位,且其开展合法的新闻报道所必需的;</li>
+            <li><strong>6.11</strong>个人信息控制者为学术研究机构,处理公共利益开展统计或学术研究所必要,且其对外提供学术研究或描述的结果时,对结果中所包含的个人信息进行去标识化处理的。</li>
+          </ul>
+
+          <p>如我们停止运营本应用产品或服务,我们将及时停止继续收集您个人信息的活动,将停止运营的通知以逐一送达或公告的形式通知您,对所持有的个人信息进行删除或匿名化处理。</p>
+
+          <h4>7. 客服与售后功能</h4>
+          <p>当您与我们联系或提出售中售后、争议纠纷处理申请时,为了保障您的账户及系统安全,我们需要您提供必要的个人信息以核验您的会员身份。此时我们的客服和售后功能可能会使用您的账号信息和订单信息。</p>
+
+          <p>
+            为便于与您联系、尽快帮助您解决问题或记录相关问题的处理方案及结果,我们可能会保存您与我们的通信/通话记录及相关内容(包括账号信息、订单信息、您为了证明相关事实提供的其他信息,或您留下的联系方式信息),如果您针对具体订单进行咨询、投诉或提供建议的,我们会使用您的账号信息和订单信息。
+          </p>
+
+          <p>为了提供服务及改进服务质量的合理需要,我们还可能使用的您的其他信息,包括您与客服联系时您提供的相关信息,以及您参与问卷调查时提交的答复内容。</p>
+
+          <h4>8. 应用中集成的第三方SDK说明</h4>
+          <p>为实现相关功能,本应用集成了以下第三方SDK。我们已与第三方SDK提供商签订数据安全和保密协议,要求其严格遵守我们的数据隐私和安全要求。</p>
+
+          <div class="sdk-table-wrapper">
+            <table class="sdk-table">
+              <thead>
+                <tr>
+                  <th>SDK名称</th>
+                  <th>包名</th>
+                  <th>服务商</th>
+                  <th>使用目的</th>
+                  <th>调用权限</th>
+                  <th>收集的信息类型</th>
+                  <th>隐私政策链接</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="sdk-section-title">
+                  <td colspan="7">基础框架SDK</td>
+                </tr>
+                <tr>
+                  <td>DCloud uni-app</td>
+                  <td>io.dcloud</td>
+                  <td>数字天堂（北京）网络技术有限公司</td>
+                  <td>应用核心模块</td>
+                  <td>
+                    INTERNET<br>READ_PHONE_STATE<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>WRITE_EXTERNAL_STORAGE
+                  </td>
+                  <td>设备信息（IMEI、MAC、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（BSSID）</td>
+                  <td><a href="https://dcloud.io/license/appprivacy.html" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>阿里巴巴 weexSDK</td>
+                  <td>com.taobao.weex</td>
+                  <td>阿里巴巴（中国）有限公司</td>
+                  <td>uni-app基础模块默认集成，用于渲染nvue页面引擎</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>存储的个人文件</td>
+                  <td><a href="https://weexapp.com/zh/" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>Fresco图片库</td>
+                  <td>com.facebook.fresco</td>
+                  <td>Facebook Inc.</td>
+                  <td>用于nvue页面加载图片</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>存储的个人文件</td>
+                  <td><a href="https://github.com/facebook/fresco" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>Glide图片库</td>
+                  <td>com.bumptech.glide</td>
+                  <td>Bump Technologies</td>
+                  <td>用于图片预览</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>存储的个人文件</td>
+                  <td><a href="http://bumptech.github.io/glide/" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>gif-drawable</td>
+                  <td>pl.droidsonroids.gif</td>
+                  <td>Karol Wrótniak</td>
+                  <td>加载GIF图片</td>
+                  <td>无</td>
+                  <td>存储文件</td>
+                  <td><a href="https://github.com/koral--/android-gif-drawable" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>fastjson</td>
+                  <td>com.alibaba.fastjson</td>
+                  <td>阿里巴巴（中国）有限公司</td>
+                  <td>JSON数据解析</td>
+                  <td>无</td>
+                  <td>无</td>
+                  <td><a href="https://github.com/alibaba/fastjson" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>OkHttp3</td>
+                  <td>com.squareup.okhttp3</td>
+                  <td>Square, Inc.</td>
+                  <td>网络请求</td>
+                  <td>INTERNET</td>
+                  <td>无</td>
+                  <td><a href="https://github.com/square/okhttp" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>Okio</td>
+                  <td>okio</td>
+                  <td>Square, Inc.</td>
+                  <td>I/O操作库</td>
+                  <td>无</td>
+                  <td>无</td>
+                  <td><a href="https://github.com/square/okio" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>UniversalImageLoader</td>
+                  <td>com.nostra13.universalimageloader</td>
+                  <td>Sergey Tarasevich</td>
+                  <td>图片加载</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>存储的个人文件</td>
+                  <td><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>bolts</td>
+                  <td>bolts</td>
+                  <td>Facebook Inc.</td>
+                  <td>异步任务处理</td>
+                  <td>无</td>
+                  <td>无</td>
+                  <td><a href="https://github.com/BoltsFramework/Bolts-Android" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>Zip4j</td>
+                  <td>net.lingala.zip4j</td>
+                  <td>Srikanth Reddy Lingala</td>
+                  <td>ZIP文件压缩解压</td>
+                  <td>无</td>
+                  <td>存储文件</td>
+                  <td><a href="https://github.com/srikanth-lingala/zip4j" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>移动安全联盟 OAID</td>
+                  <td>
+                    com.bun.miitmdid<br>com.zui.opendeviceidlibrary<br>com.netease.nis<br>com.samsung.android<br>com.huawei.hms
+                  </td>
+                  <td>移动安全联盟</td>
+                  <td>获取OAID</td>
+                  <td>无</td>
+                  <td>设备信息</td>
+                  <td><a href="http://www.msa-alliance.cn/col.jsp?id=122" target="_blank">查看</a></td>
+                </tr>
+                <tr class="sdk-section-title">
+                  <td colspan="7">业务功能SDK</td>
+                </tr>
+                <tr>
+                  <td>高德地图SDK</td>
+                  <td>com.amap.api</td>
+                  <td>高德软件有限公司</td>
+                  <td>地图服务、位置分享、周边搜索</td>
+                  <td>
+                    INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>ACCESS_COARSE_LOCATION<br>ACCESS_FINE_LOCATION<br>READ_PHONE_STATE<br>WRITE_EXTERNAL_STORAGE
+                  </td>
+                  <td>位置信息（经纬度）、设备信息（IDFA、Android ID、OAID、IMEI、MAC）、网络信息（IP地址）</td>
+                  <td><a href="https://lbs.amap.com/pages/privacy/" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>腾讯地图SDK</td>
+                  <td>com.tencent.map</td>
+                  <td>深圳市腾讯计算机系统有限公司</td>
+                  <td>H5端地图展示、位置服务</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>WRITE_EXTERNAL_STORAGE</td>
+                  <td>位置信息、设备信息</td>
+                  <td><a href="https://lbs.qq.com/terms.html" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>科大讯飞语音识别</td>
+                  <td>com.iflytek</td>
+                  <td>科大讯飞股份有限公司</td>
+                  <td>语音消息转文字</td>
+                  <td>INTERNET<br>RECORD_AUDIO<br>READ_PHONE_STATE</td>
+                  <td>语音数据、设备信息</td>
+                  <td><a href="https://www.xfyun.cn/doc/policy/privacy.html" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>微软翻译服务</td>
+                  <td>com.microsoft.translator</td>
+                  <td>微软（中国）有限公司</td>
+                  <td>消息文本翻译</td>
+                  <td>INTERNET</td>
+                  <td>待翻译的文本内容、语言偏好设置</td>
+                  <td><a href="https://privacy.microsoft.com/zh-cn/privacystatement" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>华为云OBS存储</td>
+                  <td>com.huaweicloud.obs</td>
+                  <td>华为云计算技术有限公司</td>
+                  <td>图片、视频、文件存储</td>
+                  <td>INTERNET<br>WRITE_EXTERNAL_STORAGE</td>
+                  <td>用户上传的文件内容、文件元数据</td>
+                  <td><a href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank">查看</a></td>
+                </tr>
+                <tr class="sdk-section-title">
+                  <td colspan="7">运营保障SDK</td>
+                </tr>
+                <tr>
+                  <td>个推·消息推送</td>
+                  <td>com.igexin</td>
+                  <td>每日互动股份有限公司</td>
+                  <td>消息推送通知</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>READ_PHONE_STATE<br>VIBRATE<br>GET_TASKS
+                  </td>
+                  <td>设备信息（IMEI、OAID、MAC、ANDROID_ID、设备型号、系统版本）、应用安装列表、网络信息（IP地址、WIFI信息）</td>
+                  <td><a href="http://docs.getui.com/privacy" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>华为推送</td>
+                  <td>com.huawei.hms</td>
+                  <td>华为技术有限公司</td>
+                  <td>消息推送通知</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>REQUEST_INSTALL_PACKAGES</td>
+                  <td>设备信息、应用信息、消息下发记录</td>
+                  <td><a
+                      href="https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides/sdk-data-security-0000001050042177"
+                      target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>小米推送</td>
+                  <td>com.xiaomi.mipush</td>
+                  <td>小米科技有限责任公司</td>
+                  <td>消息推送通知</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE</td>
+                  <td>设备信息、OAID、应用信息</td>
+                  <td><a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>Vivo推送</td>
+                  <td>com.vivo.push</td>
+                  <td>维沃移动通信有限公司</td>
+                  <td>消息推送通知</td>
+                  <td>INTERNET</td>
+                  <td>设备信息、应用信息</td>
+                  <td><a href="https://dev.vivo.com.cn/documentCenter/doc/366" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>OPPO推送</td>
+                  <td>com.heytap.msp</td>
+                  <td>广东欧珀移动通信有限公司</td>
+                  <td>消息推送通知</td>
+                  <td>INTERNET</td>
+                  <td>设备信息、应用信息</td>
+                  <td><a href="https://open.oppomobile.com/wiki/doc#id=10288" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>魅族推送</td>
+                  <td>com.meizu.cloud.pushsdk</td>
+                  <td>珠海市魅族科技有限公司</td>
+                  <td>消息推送通知</td>
+                  <td>INTERNET<br>READ_PHONE_STATE</td>
+                  <td>设备信息、应用信息</td>
+                  <td><a href="https://www.meizu.com/legal.html" target="_blank">查看</a></td>
+                </tr>
+                <tr class="sdk-section-title">
+                  <td colspan="7">第三方原生插件</td>
+                </tr>
+                <tr>
+                  <td>KJ-VideoThumbnail</td>
+                  <td>uni.KJ-VideoThumbnail</td>
+                  <td>DCloud插件市场第三方开发者</td>
+                  <td>获取视频缩略图、封面</td>
+                  <td>无</td>
+                  <td>视频文件路径信息</td>
+                  <td><a href="https://ext.dcloud.net.cn/plugin?id=1577" target="_blank">查看</a></td>
+                </tr>
+                <tr>
+                  <td>KJ-Key（仅iOS）</td>
+                  <td>uni.KJ-Key</td>
+                  <td>DCloud插件市场第三方开发者</td>
+                  <td>监听音量键、静音状态</td>
+                  <td>无</td>
+                  <td>设备音量状态信息</td>
+                  <td><a href="https://ext.dcloud.net.cn/plugin?id=11862" target="_blank">查看</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>跨法域角色披露：</strong>在不同法域中,部分SDK提供商可能作为处理者（按我们的书面指示处理）或作为独立控制者（为其自身合法目的处理）。我们将根据适用法律披露相关角色。</p>
+
+          <h4>9. 删除您的个人信息</h4>
+          <p>您可以通过网页端"My BuildMost-账户中心-个人信息"修改您的部分信息，或申请注销账户删除您的全部信息。</p>
+          <p>在以下情形中，您可以联系客服或 <a href="mailto:service@buildmost.com">service@buildmost.com</a> 向我们提出删除用户信息的请求：</p>
+          <ol>
+            <li>如果我们处理用户信息的行为违反法律法规；</li>
+            <li>如果我们收集、使用您的用户信息，却未征得您的明确同意；</li>
+            <li>如果我们处理用户信息的行为严重违反了与您的约定；</li>
+            <li>如果我们的处理目的已实现、无法实现或者为实现处理目的不再必要；</li>
+            <li>如果我们停止提供产品及/或服务，或者保存期限已届满。</li>
+          </ol>
+          <p>为保障安全，您可能需要提供书面请求，或以其他方式证明您的身份。我们可能会先要求您验证自己的身份，然后再处理您的请求。</p>
+          <p>
+            我们承诺在您提出请求后15个工作日内处理完成，当您或我们协助您删除相关信息后，因为适用的法律和安全技术限制，我们可能无法立即从备份系统中删除相应的信息，我们将停止除存储和采取必要的安全保护措施之外的处理，直到备份可以清除或实现匿名化。
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <p>We collect and use your personal information for the following purposes and in accordance with the rules
+            described below when providing our products/services:</p>
+
+          <p><strong>1) Information Necessary for Core Features:</strong> To deliver core features and services, certain
+            information is required; refusal to provide such information may prevent normal use of core features. </p>
+
+          <p><strong>2) Optional Information for Additional Features:</strong> For additional/optional features, you may
+            choose whether to grant permissions; refusal will affect only that feature or its effectiveness and will not
+            affect the use of basic functions. </p>
+
+          <div class="highlight">
+            <p class="mark">Lawful Bases in Certain Jurisdictions (e.g., EEA/UK/Switzerland):</p>
+            <p>For each processing purpose, we will rely on an appropriate lawful basis under applicable law, such as
+              your consent, performance of a contract, legitimate interests, or compliance with legal obligations. </p>
+          </div>
+
+          <h3>Location-Related Content/Services:</h3>
+          <p>With your authorization, we may use geolocation information related to the services (e.g., precise
+            location, WLAN access points, Bluetooth and base stations, sensor information) to provide more tailored
+            content or services. Precise location is Sensitive Personal Information; if you decline authorization,
+            location accuracy may be affected, but other features will not be. Where authorization is not granted, we
+            may display content/services based on city/district inferred from network information (e.g., IP). Optional
+            features are disabled by default unless you enable them.</p>
+
+          <h3>Device Sensors:</h3>
+          <p>During your use of the App, we may use direction/gravitation/gyroscope sensors to help detect genuine user
+            activity; when you use capture/shooting features, we may use the accelerometer to determine the shooting
+            angle.</p>
+
+          <h3>Clipboard:</h3>
+          <p>When you copy/paste during use (e.g., SMS verification codes, phone numbers, device SN), we may request
+            clipboard access and locally read the necessary text. Such information is processed on your device only, is
+            not persistently stored, and is not used for other purposes.</p>
+
+          <h3>Special Note: The information above is not required for all business functions to operate, but it helps
+            improve service quality and develop new products/services. You may choose whether to provide it; refusal
+            will not adversely affect the availability of the functions themselves. </h3>
+
+          <h3>Specific Feature Scenarios We Provide</h3>
+          <!-- <div class="highlight">
+                        <p class="mark">Special Note:</p>
+                        <p>The information above is not required for all business functions to operate, but it helps improve service quality and develop new products/services. You may choose whether to provide it; refusal will not adversely affect the availability of the functions themselves.</p>
+                    </div>
+                    
+                    <h3>Specific Feature Scenarios We Provide</h3> -->
+
+          <h4>1. Helping You Become Our User</h4>
+          <p>To create an account so that we can provide services, you need to provide necessary information including
+            your mobile phone number. The phone number you provide at registration will be used to receive an SMS
+            verification code, which we use to verify your identity. After registration, you can modify or supplement
+            your nickname, gender, birthday, avatar, real-name verification bindings, and your Alipay or WeChat account
+            (for withdrawals) and related information—collectively, your “Account Information.” When you log in with a
+            third-party account (e.g., WeChat or Apple), if you decide to bind that third-party account, you must first
+            complete the third-party binding authorization. After authorization, the third-party platform may share some
+            information from your third-party account with us (such as username, mobile number, avatar, nickname,
+            region, gender, and identity verification information—subject to your authorization). We collect this
+            information to provide account login services, secure your account, and mitigate security risks. If you
+            refuse to authorize, you will be unable to log in with the third-party account, but other products and
+            services we provide remain available.</p>
+          <p>Providing additional profile information (e.g., your birthday, occupation, interests, mobile number) can
+            improve your service experience; not providing it will not affect basic functions of the App.</p>
+          <p>The above information you provide will remain authorized for our use during your use of the services. When
+            you actively request to close/delete your account, we will anonymize or delete your personal information as
+            required by applicable laws and regulations.</p>
+
+          <h4>2. Providing Services and Meeting Your Needs</h4>
+          <p>To display content or services to you, we collect and use, when you visit or use our website or client,
+            device information (including device identifiers (IMEI, IDFA, Android ID, SIM information ICCID, BSSID, IMSI
+            and other device-related information), application information (crash information, notification toggle
+            status, installed app list and other app-related information), device parameters and system information
+            (device type/model, OS and hardware information), device network environment information (IP address, Wi-Fi
+            information, base-station information and other network-related information (BSSID), service log information
+            (browsing records, click-through records, search queries, favorites, follows/shares, published content, as
+            well as IP address, browser type, carrier, language used, access date and time), and basic information you
+            submit (such as nickname, gender, phone number) to complete your profile.</p>
+
+          <h4>3. Providing Goods or Services</h4>
+
+          <h5>3.1 Information You Provide to Us</h5>
+          <p>When registering an account or using our services, you provide personal information such as WeChat basic
+            information (nickname, avatar, gender) and phone number; this also includes information you share with
+            others through our services and information you store while using our services. If you need to provide
+            another person’s personal information to the App, you must ensure you have that person’s
+            authorization/consent.</p>
+
+          <h5>3.2 Information We Collect During Your Use of Services</h5>
+          <p>To provide search results, understand product compatibility, and detect abnormal account status, we collect
+            information about the services you use and how you use them and may associate such information. This
+            includes:</p>
+
+          <h5>3.2.1 Device Information:</h5>
+          <p>To ensure the secure operation of the App and services, we collect your device model, app list (installed
+            apps), device name, unique device identifiers, login IP address, product version, and mobile network
+            information.</p>
+          <p>We may collect in silent/background mode your (device identifiers, device serial number, Android ID, app
+            list, IMEI, IDFA, SSID, SIM information ICCID, MAC, name, phone number, location), and network information
+            (BSSID), to identify user identity information.</p>
+          <p>Based on the specific permissions you grant during installation and use, the purposes, methods, and scope
+            for the App’s collection of personal information are as follows:</p>
+
+
+          <h2 class="lang-en newTitle">Explicit List of Personal Information Collected by the App</h2>
+          <p> <strong>Business Scenario:</strong>Registration & Login</p>
+          <p> <strong>Permissions Used:</strong>Access to Photos and Camera</p>
+          <p> <strong>Purpose:</strong>Create an account and improve online identity attributes</p>
+          <p> <strong>Method of Collection:</strong>User entry / App collection</p>
+          <p> <strong>Personal Information Fields:</strong>Mobile number, email, nickname</p>
+          <p> <strong>Business Scenario:</strong>Edit Profile Information</p>
+          <p> <strong>Permissions Used:</strong>None</p>
+          <p> <strong>Purpose:</strong>Modify avatar in profile</p>
+          <p> <strong>Method of Collection:</strong>App collection</p>
+          <p> <strong>Personal Information Fields:</strong>Avatar photo</p>
+
+          <p><strong>Third-Party SDKs Integrated in the App – Purposes, Methods, and Scope</strong></p>
+
+          <p>Our products are developed based on DCloud uni-app (5+ App/Wap2App). To ensure operation and provide
+            various features, the App integrates the following third-party SDKs. We have entered into data security and
+            confidentiality arrangements with third-party SDK providers.</p>
+
+          <div class="sdk-table-wrapper">
+            <table class="sdk-table">
+              <thead>
+                <tr>
+                  <th>SDK Name</th>
+                  <th>Package Name</th>
+                  <th>Provider</th>
+                  <th>Purpose</th>
+                  <th>Permissions</th>
+                  <th>Information Collected</th>
+                  <th>Privacy Policy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="sdk-section-title">
+                  <td colspan="7">Core Framework SDKs</td>
+                </tr>
+                <tr>
+                  <td>DCloud uni-app</td>
+                  <td>io.dcloud</td>
+                  <td>DCloud</td>
+                  <td>Core modules</td>
+                  <td>
+                    INTERNET<br>READ_PHONE_STATE<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>WRITE_EXTERNAL_STORAGE
+                  </td>
+                  <td>Device info (IMEI, MAC, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID); Network info (BSSID)</td>
+                  <td><a href="https://dcloud.io/license/appprivacy.html" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Alibaba weexSDK</td>
+                  <td>com.taobao.weex</td>
+                  <td>Alibaba Group</td>
+                  <td>Default integrated module for rendering nvue pages</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>Stored personal files</td>
+                  <td><a href="https://weexapp.com/zh/" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Fresco Image Library</td>
+                  <td>com.facebook.fresco</td>
+                  <td>Facebook Inc.</td>
+                  <td>Image loading for nvue pages</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>Stored personal files</td>
+                  <td><a href="https://github.com/facebook/fresco" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Glide Image Library</td>
+                  <td>com.bumptech.glide</td>
+                  <td>Bump Technologies</td>
+                  <td>Image preview</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>Stored personal files</td>
+                  <td><a href="http://bumptech.github.io/glide/" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>gif-drawable</td>
+                  <td>pl.droidsonroids.gif</td>
+                  <td>Karol Wrótniak</td>
+                  <td>GIF image loading</td>
+                  <td>None</td>
+                  <td>Stored files</td>
+                  <td><a href="https://github.com/koral--/android-gif-drawable" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>fastjson</td>
+                  <td>com.alibaba.fastjson</td>
+                  <td>Alibaba Group</td>
+                  <td>JSON data parsing</td>
+                  <td>None</td>
+                  <td>None</td>
+                  <td><a href="https://github.com/alibaba/fastjson" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>OkHttp3</td>
+                  <td>com.squareup.okhttp3</td>
+                  <td>Square, Inc.</td>
+                  <td>Network requests</td>
+                  <td>INTERNET</td>
+                  <td>None</td>
+                  <td><a href="https://github.com/square/okhttp" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Okio</td>
+                  <td>okio</td>
+                  <td>Square, Inc.</td>
+                  <td>I/O operations library</td>
+                  <td>None</td>
+                  <td>None</td>
+                  <td><a href="https://github.com/square/okio" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>UniversalImageLoader</td>
+                  <td>com.nostra13.universalimageloader</td>
+                  <td>Sergey Tarasevich</td>
+                  <td>Image loading</td>
+                  <td>WRITE_EXTERNAL_STORAGE</td>
+                  <td>Stored personal files</td>
+                  <td><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>bolts</td>
+                  <td>bolts</td>
+                  <td>Facebook Inc.</td>
+                  <td>Async task handling</td>
+                  <td>None</td>
+                  <td>None</td>
+                  <td><a href="https://github.com/BoltsFramework/Bolts-Android" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Zip4j</td>
+                  <td>net.lingala.zip4j</td>
+                  <td>Srikanth Reddy Lingala</td>
+                  <td>ZIP file compression/decompression</td>
+                  <td>None</td>
+                  <td>Stored files</td>
+                  <td><a href="https://github.com/srikanth-lingala/zip4j" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>MSA OAID</td>
+                  <td>
+                    com.bun.miitmdid<br>com.zui.opendeviceidlibrary<br>com.netease.nis<br>com.samsung.android<br>com.huawei.hms
+                  </td>
+                  <td>Mobile Security Alliance</td>
+                  <td>Obtain OAID</td>
+                  <td>None</td>
+                  <td>Device info</td>
+                  <td><a href="http://www.msa-alliance.cn/col.jsp?id=122" target="_blank">View</a></td>
+                </tr>
+                <tr class="sdk-section-title">
+                  <td colspan="7">Business Feature SDKs</td>
+                </tr>
+                <tr>
+                  <td>Amap SDK</td>
+                  <td>com.amap.api</td>
+                  <td>AutoNavi Software Co., Ltd.</td>
+                  <td>Map services, location sharing, nearby search</td>
+                  <td>
+                    INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>ACCESS_COARSE_LOCATION<br>ACCESS_FINE_LOCATION<br>READ_PHONE_STATE<br>WRITE_EXTERNAL_STORAGE
+                  </td>
+                  <td>Location (coordinates), device info (IDFA, Android ID, OAID, IMEI, MAC), network info (IP)</td>
+                  <td><a href="https://lbs.amap.com/pages/privacy/" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Tencent Maps SDK</td>
+                  <td>com.tencent.map</td>
+                  <td>Tencent</td>
+                  <td>H5 map display, location services</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>WRITE_EXTERNAL_STORAGE</td>
+                  <td>Location info, device info</td>
+                  <td><a href="https://lbs.qq.com/terms.html" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>iFlytek Speech Recognition</td>
+                  <td>com.iflytek</td>
+                  <td>iFlytek Co., Ltd.</td>
+                  <td>Voice-to-text conversion</td>
+                  <td>INTERNET<br>RECORD_AUDIO<br>READ_PHONE_STATE</td>
+                  <td>Voice data, device info</td>
+                  <td><a href="https://www.xfyun.cn/doc/policy/privacy.html" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Microsoft Translator</td>
+                  <td>com.microsoft.translator</td>
+                  <td>Microsoft Corporation</td>
+                  <td>Text translation</td>
+                  <td>INTERNET</td>
+                  <td>Text content, language preferences</td>
+                  <td><a href="https://www.microsoft.com/zh-cn/privacy/privacystatement" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Huawei Cloud OBS</td>
+                  <td>com.huaweicloud.obs</td>
+                  <td>Huawei Cloud</td>
+                  <td>File storage (images, videos, files)</td>
+                  <td>INTERNET<br>WRITE_EXTERNAL_STORAGE</td>
+                  <td>Uploaded files, file metadata</td>
+                  <td><a href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="sdk-section-title">
+                  <td colspan="7">Operational SDKs</td>
+                </tr>
+                <tr>
+                  <td>Getui Push</td>
+                  <td>com.igexin</td>
+                  <td>Daily Interactive Co., Ltd.</td>
+                  <td>Push notifications</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>READ_PHONE_STATE<br>VIBRATE<br>GET_TASKS
+                  </td>
+                  <td>Device info (IMEI, OAID, MAC, ANDROID_ID, model, OS version), app list, network info (IP, WIFI)
+                  </td>
+                  <td><a href="http://docs.getui.com/privacy" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Huawei Push</td>
+                  <td>com.huawei.hms</td>
+                  <td>Huawei Technologies Co., Ltd.</td>
+                  <td>Push notifications</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>REQUEST_INSTALL_PACKAGES</td>
+                  <td>Device info, app info, message delivery records</td>
+                  <td><a
+                      href="https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides/sdk-data-security-0000001050042177"
+                      target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Xiaomi Push</td>
+                  <td>com.xiaomi.mipush</td>
+                  <td>Xiaomi Inc.</td>
+                  <td>Push notifications</td>
+                  <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE</td>
+                  <td>Device info, OAID, app info</td>
+                  <td><a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Vivo Push</td>
+                  <td>com.vivo.push</td>
+                  <td>Vivo Mobile Communication Co., Ltd.</td>
+                  <td>Push notifications</td>
+                  <td>INTERNET</td>
+                  <td>Device info, app info</td>
+                  <td><a href="https://dev.vivo.com.cn/documentCenter/doc/366" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>OPPO Push</td>
+                  <td>com.heytap.msp</td>
+                  <td>Guangdong OPPO Mobile Telecommunications Corp., Ltd.</td>
+                  <td>Push notifications</td>
+                  <td>INTERNET</td>
+                  <td>Device info, app info</td>
+                  <td><a href="https://open.oppomobile.com/wiki/doc#id=10288" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>Meizu Push</td>
+                  <td>com.meizu.cloud.pushsdk</td>
+                  <td>Zhuhai Meizu Technology Co., Ltd.</td>
+                  <td>Push notifications</td>
+                  <td>INTERNET<br>READ_PHONE_STATE</td>
+                  <td>Device info, app info</td>
+                  <td><a href="https://www.meizu.com/legal.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="sdk-section-title">
+                  <td colspan="7">Third-Party Native Plugins</td>
+                </tr>
+                <tr>
+                  <td>KJ-VideoThumbnail</td>
+                  <td>uni.KJ-VideoThumbnail</td>
+                  <td>DCloud Plugin Market Third-Party Developer</td>
+                  <td>Video thumbnail generation</td>
+                  <td>None</td>
+                  <td>Video file path info</td>
+                  <td><a href="https://ext.dcloud.net.cn/plugin?id=1577" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                  <td>KJ-Key (iOS only)</td>
+                  <td>uni.KJ-Key</td>
+                  <td>DCloud Plugin Market Third-Party Developer</td>
+                  <td>Volume key and mute status monitoring</td>
+                  <td>None</td>
+                  <td>Device volume status info</td>
+                  <td><a href="https://ext.dcloud.net.cn/plugin?id=11862" target="_blank">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p> <strong>Role Disclosure Across Jurisdictions:</strong>In different jurisdictions, some SDK providers may
+            act as Processors (processing under our written instructions) or as Independent Controllers for their own
+            lawful purposes. We will disclose roles in accordance with applicable laws.</p>
+
+          <h4>9. Deletion of Your Personal Information</h4>
+          <p>You can modify some of your information via "My BuildMost - Account Center - Personal Information" on the
+            web, or apply to delete your account to remove all your information.</p>
+          <p>You may contact customer service or <a href="mailto:service@buildmost.com">service@buildmost.com</a> to
+            request deletion of your personal information in the following circumstances:</p>
+          <ol>
+            <li>If our processing of your information violates laws or regulations;</li>
+            <li>If we collected or used your information without your explicit consent;</li>
+            <li>If our processing seriously violates our agreement with you;</li>
+            <li>If the processing purpose has been achieved, cannot be achieved, or is no longer necessary;</li>
+            <li>If we cease to provide products and/or services, or the retention period has expired.</li>
+          </ol>
+          <p>For security purposes, you may need to provide a written request or otherwise verify your identity. We may
+            ask you to verify your identity before processing your request.</p>
+          <p>After you or we assist in deleting the relevant information, due to applicable laws and security technology
+            limitations, we may not be able to immediately delete the corresponding information from backup systems. We
+            will cease processing other than storage and necessary security measures until the backup can be cleared or
+            anonymized.</p>
+
+          <p> <strong>3.3.2 Service Log Information:</strong>Includes browsing history, click-through records, search
+            queries, favorites, transactions, after-sales, follow/share information, published content, as well as IP
+            address, browser type, carrier, language used, access date/time.</p>
+
+          <p>When you use products or services provided via our website or client, we automatically collect detailed
+            usage as network logs, e.g., your search queries, IP address, browser type, carrier, language used, access
+            date/time, and pages visited.</p>
+
+          <p><strong>Please note that standalone device information and log information do not identify a specific
+              natural person. If we combine such non-personal information with other information to identify a specific
+              natural person, or otherwise combine it with personal information, then during the period of combination
+              such information will be treated as personal information; absent your authorization or as otherwise
+              permitted by law, we will apply anonymization or de-identification to such personal information.</strong>
+          </p>
+
+          <p>When you contact us, we may retain your communications/call records and content or contact details you
+            leave so that we can reach you or help resolve issues, or record handling plans and outcomes.</p>
+
+          <p><strong>3.4 Personal Information Obtained Indirectly</strong></p>
+
+          <p>You may, via your App account, access products or services provided by our affiliates through linked entry
+            points we provide. To facilitate one-stop services and unified management based on your associated account,
+            we centrally display your information in the App. You can discover and use such services via “Basic
+            Information” and “Verification Information” in your profile center.</p>
+
+          <p>When you use the above services via our products/services, you authorize us—based on actual business and
+            cooperation needs—to receive, aggregate, and analyze from our affiliates your personal or activity
+            information that we confirm to be from lawful sources or that you have authorized them to provide to us.</p>
+
+          <p>If you refuse to provide or authorize the above information, you may be unable to use the corresponding
+            products or services of the App, or to display related information; this does not affect browsing the App or
+            participating in core services that do not require privacy authorization.</p>
+
+          <h4>4. Security Safeguards for You</h4>
+          <p>To ensure user identity authenticity and provide better security, you may need to provide identity
+            documents (e.g., ID) to complete real-name verification. If you refuse, you may be unable to use account
+            management or proceed with potentially risky transactions, but you can still browse and purchase goods.</p>
+          <p>To improve the security of services we and our affiliates/partners provide, to protect the personal and
+            property safety of you, other users, or the public from harm, to better prevent phishing, fraud,
+            vulnerabilities, malware, cyberattacks/intrusions, and to more accurately identify violations of law or our
+            agreements/rules, we may use or combine your user information, transaction information, device information,
+            network logs, and information shared by our affiliates/partners with your authorization or under law, to
+            assess account and transaction risks, perform identity verification, detect and prevent security incidents,
+            and take necessary measures such as record-keeping, auditing, analysis, and disposition in accordance with
+            law.</p>
+
+          <h4>5. Favorites, Follows, and Sharing</h4>
+          <p>While browsing our website or client, you can favorite goods and/or services and share information to third
+            parties via our components. During your use of these features, we collect service log information including
+            your favorites and coupon-collection records and share history to deliver these features and for other
+            purposes we expressly notify you of.</p>
+
+          <h4>6. Exceptions to Consent</h4>
+
+          <p><strong>Under applicable laws and regulations, we may collect your personal information without obtaining
+              your consent in the following cases:</strong></p>
+          <ul>
+            <li class="newLi"><strong>6.1</strong> As necessary for the personal information controller to perform
+              statutory obligations;</li>
+            <li class="newLi"><strong>6.2</strong> Directly related to national security or national defense;</li>
+            <li class="newLi"><strong>6.3</strong> Directly related to public security, public health, or major public
+              interests;</li>
+            <li class="newLi"><strong>6.4</strong> Directly related to criminal investigation, prosecution, trial, or
+              enforcement of judgments;</li>
+            <li class="newLi"><strong>6.5</strong> To protect life, property, and other major lawful interests of the
+              data subject or other individuals where it is difficult to obtain consent;</li>
+            <li class="newLi"><strong>6.6</strong> Where the personal information is disclosed to the public by the data
+              subject;</li>
+            <li class="newLi"><strong>6.7</strong> As necessary to enter into or perform a contract at the data
+              subject's request;</li>
+            <li class="newLi"><strong>6.8</strong> Where personal information is collected from lawful public sources,
+              such as lawful news reports or government disclosures;</li>
+            <li class="newLi"><strong>6.9</strong> As necessary to maintain the safe and stable operation of the
+              products or services provided, such as discovering and handling faults;</li>
+            <li class="newLi"><strong>6.10</strong> Where the personal information controller is a news organization and
+              the collection is necessary for lawful news reporting;</li>
+            <li class="newLi"><strong>6.11</strong> Where the personal information controller is an academic research
+              institution and the processing is necessary for statistics or academic research in the public interest,
+              provided that any personal information contained in published research or descriptions is de-identified.
+            </li>
+          </ul>
+
+          <h4>7. Customer Service and After-Sales</h4>
+          <p>When you contact us or submit requests for in-sale/after-sales support or dispute resolution, to secure
+            your account and system, we need necessary personal information to verify your membership identity. Our
+            customer service and after-sales functions may use your account and order information.</p>
+          <p>To contact you, help resolve issues promptly, or record handling plans/results, we may retain your
+            communications/call records and related content (including account information, order information, other
+            information you provide to substantiate facts, or contact details you leave). If you inquire, complain, or
+            offer suggestions regarding a specific order, we will use your account and order information.</p>
+          <p>To deliver and improve services as reasonably necessary, we may also use other information, including
+            information you provide when contacting customer service and responses you submit in surveys.</p>
+          <!-- <p>If we cease operations of the App’s products or services, we will promptly stop collecting your personal information, notify you individually or via announcement of the suspension, and delete or anonymize personal information we hold.</p> -->
+        </div>
+      </div>
+
+      <div class="section" id="privacy-cookies">
+        <h2 class="lang-zh active">V. 我们如何使用Cookie和类似技术</h2>
+        <h2 class="lang-en">V. How We Use Cookies and Similar Technologies</h2>
+
+        <div class="lang-zh active">
+          <h3>1. Cookie</h3>
+          <p>
+            Cookie和同类设备信息标识技术是互联网中普遍使用的技术,当您使用我们的服务时,我们可能会使用相关技术向您的设备发送一个或多个Cookie或匿名标识符（以下简称"Cookie"）,以收集、标识和存储您访问、使用本产品时的信息,我们承诺,不会将Cookie用于本隐私政策所述目的之外的任何其他用途,我们使用Cookie主要为了保障产品与服务的安全、高效运转,可以使我们确认您账户与交易的安全状态,排查崩溃、延迟的相关异常情况,帮助您省去重复您填写表单、输入搜索内容的步骤和流程。
+          </p>
+
+          <h3>2. 网站信标和像素标签</h3>
+          <p>除 Cookie
+            外,我们还会在网站上使用网站信标和像素标签等其他同类技术。网站信标通常是一种嵌入到网站或电子邮件中的透明图像。借助于电子邮件中的像素标签,我们能够获知电子邮件是否被打开。如果您不希望自己的活动以这种方式被追踪,则可以随时从我们的寄信名单中退订。
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <h3>1. Cookies</h3>
+          <p>Cookies and similar device identifier technologies are commonly used on the Internet. When you use our
+            services, we may send one or more cookies or anonymous identifiers to your device (collectively, "Cookies")
+            to collect, identify, and store information about your visits and use of the products. We will not use
+            Cookies for any purpose other than those described in this Privacy Policy. We primarily use Cookies to
+            ensure the secure and efficient operation of the products and services, including confirming the security
+            status of your account and transactions, troubleshooting crashes and latency issues, and helping you avoid
+            re-entering the same form inputs or search queries.</p>
+
+          <h3>2. Web Beacons and Pixel Tags</h3>
+          <p>In addition to Cookies, we also use other similar technologies on our website, such as web beacons and
+            pixel tags. A web beacon is typically a transparent image embedded in a website or email. Pixel tags in
+            emails help us determine whether an email has been opened. If you do not wish for your activity to be
+            tracked in this manner, you may unsubscribe from our mailing list at any time.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-share">
+        <h2 class="lang-zh active">VI. 我们如何共享、转让和公开披露个人信息</h2>
+        <h2 class="lang-en">VI. How We Share, Transfer, and Publicly Disclose Personal Information</h2>
+
+        <div class="lang-zh active">
+          <h3>1. 共享</h3>
+          <p>我们不会与本应用服务提供者以外的公司、组织和个人共享您的个人信息,但以下情况除外:</p>
+
+          <p><strong>1.1 在获取您明确同意的情况下共享:</strong>获得您的明确同意后,我们会与其他方共享您的个人信息。</p>
+
+          <p><strong>1.2 在法定情形下的共享:</strong>我们可能会根据法律法规规定、诉讼争议解决需要,或按行政、司法机关依法提出的要求,对外共享您的个人信息。</p>
+
+          <p><strong>1.3
+              与关联公司间共享:</strong>为便于我们基于关联账号共同向您提供服务,您的个人信息可能会与我们的关联公司共享。我们只会共享必要的个人信息（如为便于您使用本应用账号使用我们关联公司产品或服务,我们会向关联公司共享您必要的账户信息）,如果我们共享您的个人敏感信息或关联公司改变个人信息的使用及处理目的,将再次征求您的授权同意。
+          </p>
+
+          <p><strong>1.4
+              与授权合作伙伴共享:</strong>仅为实现本隐私权政策中声明的目的,我们的某些服务将由我们和授权合作伙伴共同提供。我们可能会与合作伙伴共享您的某些个人信息,以提供更好的客户服务和用户体验。例如安排合作伙伴提供服务。我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息,并且只会共享提供服务所必要的个人信息。我们的合作伙伴无权将共享的个人信息用于与产品或服务无关的其他用途。
+          </p>
+
+          <div class="highlight">
+            <p class="mark">请注意:</p>
+            <p>您在使用我们服务时自愿共享甚至公开分享的信息,可能会涉及您或他人的个人信息甚至敏感个人信息。请在您进行此类操作前,谨慎地考虑后再做出决定。</p>
+          </div>
+
+          <h3>2. 转让</h3>
+          <p><strong>我们不会将您的个人信息转让给任何公司、组织和个人,但以下情况除外:</strong></p>
+
+          <p><strong>2.1 在获取您明确同意的情况下转让:</strong>获得您的明确同意后,我们会向其他方转让您的个人信息;</p>
+
+          <p><strong>2.2
+              在涉及合并、收购或破产清算时,如涉及个人信息转让,我们将要求新持有您个人信息的公司、组织继续受本个人信息保护政策的约束,若该公司、组织无法满足此要求,我们将重新要求该公司、组织向您征求授权同意。</strong>
+          </p>
+
+          <h3>3. 公开披露</h3>
+          <p><strong>我们会在以下情况下,公开披露您的个人信息:</strong></p>
+
+          <p><strong>3.1 获得您明确同意后;</strong></p>
+
+          <p><strong>3.2 基于法律的披露:</strong>在法律、法律程序、诉讼或政府主管部门强制性要求的情况下,我们可能会公开披露您的个人信息。</p>
+
+          <h3>4. 共享、转让、公开披露个人信息时事先征得授权同意的例外</h3>
+          <p><strong>以下情形中,共享、转让、公开披露您的个人信息无需事先征得您的授权同意:</strong></p>
+
+          <ul class="no-bullet">
+            <li><strong>4.1</strong>与个人信息控制者履行法律法规规定的义务相关的;</li>
+            <li><strong>4.2</strong>与国家安全、国防安全直接相关的;</li>
+            <li><strong>4.3</strong>与公共安全、公共卫生、重大公共利益直接相关的;</li>
+            <li><strong>4.4</strong>与刑事侦查、起诉、审判和判决执行等直接相关的;</li>
+            <li><strong>4.5</strong>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的;</li>
+            <li><strong>4.6</strong>个人信息主体自行向社会公众公开的个人信息;</li>
+            <li><strong>4.7</strong>从合法公开披露的信息中心收集个人信息的,如合法的新闻报道、政府信息公开等渠道。</li>
+          </ul>
+
+          <p>
+            <strong>根据法律规定,共享、转让经去标识化处理的个人信息,且确保数据接收方无法复原并重新识别个人信息主体的,不属于个人信息的对外共享、转让及公开披露行为,对此类数据的保存及处理将无需另行向您通知并征得您的同意。</strong>
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <h3>1. Sharing</h3>
+          <p>We do not share your personal information with companies, organizations, or individuals other than the
+            App's service providers, except in the following cases:</p>
+
+          <p><strong>1.1 Sharing with Your Explicit Consent:</strong> We will share your personal information with other
+            parties after obtaining your explicit consent.</p>
+
+          <p><strong>1.2 Sharing Under Legal Circumstances:</strong> We may share your personal information externally
+            as required by laws and regulations, for dispute resolution, or in response to lawful requests from
+            administrative or judicial authorities.</p>
+
+          <p><strong>1.3 Sharing with Affiliates:</strong> To provide services to you based on associated accounts, your
+            personal information may be shared with our affiliates. We will share only the personal information
+            necessary for the services (for example, we may share necessary account information to enable you to use
+            affiliate products or services through your App account). If we share your sensitive personal information or
+            an affiliate changes the purposes or methods of processing, we will seek your authorization/consent again.
+          </p>
+
+          <p><strong>1.4 Sharing with Authorized Partners:</strong> For the purposes stated in this Privacy Policy,
+            certain services may be jointly provided by us and authorized partners. We may share some of your personal
+            information with partners to deliver better customer service and user experience (e.g., arranging partners
+            to provide services). We will share personal information only for lawful, legitimate, necessary, specific,
+            and explicit purposes, and only the information necessary to provide the services. Our partners are not
+            permitted to use the shared personal information for unrelated purposes.</p>
+
+          <p><strong>Please note that information you voluntarily share or make public when using our services may
+              involve your or others’ personal information, including sensitive personal information. Please carefully
+              consider your actions before sharing</strong></p>
+
+          <p>Current types of authorized partners include:</p>
+
+          <p><strong>1.4.1 Advertising and Analytics Partners:</strong>Unless we have your explicit consent, we will not
+            share your personal identifiers (i.e., information that can identify you, such as name, email address, or
+            phone number, by which you can be contacted or identified) with advertising or analytics partners. We may
+            provide these partners with information about the reach and effectiveness of their ads without providing
+            your personal identifiers, or we may provide aggregated information that does not identify you. For example,
+            only when an advertiser agrees to our ad publishing guidelines might we inform the advertiser about the
+            performance of their ads, how many people viewed their ads or installed the App after viewing, or provide
+            non-identifying statistics (e.g., “male, 25–29, located in Beijing”) to help them understand their audience
+            or customers.</p>
+          <p><strong>1.4.2 Vendors, Service Providers, and Other Partners:</strong>We send information to vendors,
+            service providers, and other partners that support our business, including providing technical
+            infrastructure, analyzing service usage, measuring the effectiveness of ads and services, providing customer
+            service, facilitating payments, or conducting academic research and surveys.</p>
+          <p><strong>1.4.3 Third-Party SDKs:</strong>To protect your information security, we have entered into data
+            security and confidentiality arrangements with third-party SDK providers, who must strictly comply with our
+            privacy and security requirements. Unless we obtain your consent, we will not share your personal
+            identifiers with them. For any companies, organizations, and individuals with whom we share personal
+            information, we enter into strict data protection agreements requiring them to process personal information
+            per our instructions, this Privacy Policy, and any relevant confidentiality and security measures.</p>
+          <p><strong>1.4.3.1</strong>For one-click sharing services, our products integrate Umeng+ U-Share SDK, which
+            collects your device identifiers (e.g., IMEI/Android ID/IDFA) and the public information of the social
+            account you choose to share from, in order to complete one-click sharing. For details on the types and uses
+            of data collected by Umeng+ and how your personal information is protected, please visit
+            https://www.umeng.com/policy to review the Umeng+ privacy policy.</p>
+          <p><strong>1.4.3.2</strong>Our products integrate the Getui SDK. During App operation, the SDK may collect
+            your unique device identifiers (IMEI/Android ID/IDFA, MAC, OAID), and, by obtaining the installed
+            application list, enable the service provider to adjust push delivery paths and mutually reactivate closed
+            SDK push processes.</p>
+          <p>Push Service Provider: Daily Interactive Co., Ltd. provides push technologies (igexin/getui SDK). We may
+            provide your device platform, manufacturer, brand, device identifiers, installed app list, network
+            information, and location-related information to Daily Interactive to deliver push services. When pushing
+            messages to you, we may authorize Daily Interactive to adjust delivery paths and mutually reactivate closed
+            SDK push processes to ensure you receive our messages in a timely manner. For details, see the Getui User
+            Privacy Policy at http://docs.getui.com/privacy.</p>
+
+          <!-- <div class="highlight">
+                        <p class="mark">Please note:</p>
+                        <p>Information you voluntarily share or make public when using our services may involve your or others' personal information, including sensitive personal information. Please carefully consider your actions before sharing.</p>
+                    </div> -->
+
+          <h3>2. Transfer</h3>
+          <p><strong>We do not transfer your personal information to any company, organization, or individual, except in
+              the following cases:</strong></p>
+
+          <p><strong>2.1 Transfer with Your Explicit Consent: After obtaining your explicit consent, we may transfer
+              your personal information to other parties.</strong></p>
+
+          <p><strong>2.2 Merger, Acquisition, or Bankruptcy: In the event of a merger, acquisition, or bankruptcy
+              liquidation involving personal information transfer, we will require the new entity holding your personal
+              information to continue to be bound by this Privacy Policy; if the new entity cannot meet this
+              requirement, we will require it to obtain your authorization/consent again.</strong></p>
+
+          <h3>3. Public Disclosure</h3>
+          <p><strong>We may publicly disclose your personal information in the following situations:</strong></p>
+
+          <p><strong>3.1 After obtaining your explicit consent;</strong></p>
+          <p><strong>3.2 Legal Disclosure: Where disclosure is required by law, legal process, litigation, or mandatory
+              requests from government authorities.</strong></p>
+
+          <h3>4. Exceptions to Prior Authorization/Consent for Sharing, Transfer, or Public Disclosure</h3>
+          <p><strong>We may share, transfer, or publicly disclose your personal information without obtaining your prior
+              authorization/consent in the following scenarios:</strong></p>
+          <p><Strong>4.1 As necessary for the personal information controller to fulfill statutory obligations;</Strong>
+          </p>
+          <p><Strong>4.2 Directly related to national security or national defense;</Strong></p>
+          <p><strong>4.3 Directly related to public security, public health, or major public interests;</strong></p>
+          <p><strong>4.4 Directly related to criminal investigation, prosecution, trial, or enforcement of
+              judgments;</strong></p>
+          <p><strong>4.5 To protect the life, property, or other major lawful rights and interests of the data subject
+              or other individuals where it is difficult to obtain consent;</strong></p>
+          <p><strong>4.6 Personal information that the data subject has disclosed to the public;</strong></p>
+          <p><strong>4.7 Personal information collected from lawful public sources, such as lawful news reports or
+              government disclosures.</strong></p>
+          <p><strong>As permitted by law, the sharing or transfer of de-identified personal information, provided that
+              the data recipient is unable to re-identify the data subject and cannot restore the data, does not
+              constitute external sharing, transfer, or public disclosure of personal information; storage and
+              processing of such data do not require separate notice to you or additional consent.</strong></p>
+
+        </div>
+      </div>
+
+      <div class="section" id="privacy-security">
+        <h2 class="lang-zh active">VII. 我们如何保护信息安全</h2>
+        <h2 class="lang-en">VII. How We Protect Information Security</h2>
+
+        <div class="lang-zh active">
+          <p><strong>1.</strong>
+            我们已使用符合业界标准的安全防护措施保护您提供的个人信息,防止数据遭到未经授权访问、公开披露、使用、修改、损坏或丢失。我们会采取一切合理可行的措施,保护您的个人信息。例如,在您的浏览器与服务器之间交换数据（如信用卡信息）时受
+            SSL（Secure Socket
+            Layer）协议加密保护(即HTTPS协议);我们会使用加密技术提高个人信息的安全性;我们会使用受信赖的保护机制防止个人信息遭到恶意攻击;我们会部署访问控制机制,尽力确保只有授权人员才可访问个人信息;以及我们会举办安全和隐私保护培训课程,加强员工对于保护个人信息重要性的认识。
+          </p>
+
+          <p><strong>2.</strong> 我们有行业先进的以数据为核心,围绕数据生命周期进行的数据安全管理体系,从组织建设、制度设计、人员管理、产品技术等方面多维度提升整个系统的安全性。</p>
+
+          <p><strong>3.</strong> 我们会采取合理可行的措施,确保未收集无关的个人信息。我们只会在达成本政策所述目的所需的期限内保留您的个人信息,除非需要延长保留期或得到法律的允许。</p>
+
+          <p><strong>4.</strong>
+            互联网并非绝对安全的环境,我们强烈建议您不要使用非本应用建议的通信方式发送个人信息。您可以通过我们的服务建立联系和相互分享。当您通过我们的服务创建交流、交易或分享时,您可以自主选择沟通、交易或分享的对象,作为能够看到您的交易内容、联络方式、交流信息或分享内容等相关信息的第三方。
+          </p>
+
+          <p>如您发现自己的个人信息尤其是您的账户或密码发生泄露,请您立即联络本应用客服,以便我们根据您的申请采取相应措施。</p>
+
+          <div class="highlight">
+            <p class="mark">请注意:</p>
+            <p>
+              您在使用我们服务时自愿共享甚至公开分享的信息,可能会涉及您或他人的个人信息甚至个人敏感信息,如您在发表动态或者在群聊天、圈子等公众场合选择上传包含个人信息的图片。请您更加谨慎地考虑,是否在使用我们的服务时共享甚至公开分享相关信息。
+            </p>
+          </div>
+
+          <p>
+            请使用复杂密码,协助我们保证您的账号安全。我们将尽力保障您发送给我们的任何信息的安全性。同时,我们还将按照监管部门要求,上报个人信息安全事件的处置情况。<strong>我们会尽最大努力保障您个人信息的安全,但也请您理解,目前没有任何一种安全防护措施能做到绝对无风险。</strong>
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <p><strong>1.</strong> We use industry-standard security safeguards to protect the personal information you
+            provide and to prevent unauthorized access, disclosure, use, alteration, damage, or loss. We will take all
+            reasonable and practicable measures to protect your personal information. For example, data exchanged
+            between your browser and our servers (such as credit card information) is protected by SSL (Secure Socket
+            Layer) encryption (i.e., the HTTPS protocol); we use encryption technologies to enhance the security of
+            personal information; we adopt trusted protection mechanisms to prevent malicious attacks; we deploy access
+            control mechanisms to ensure that only authorized personnel can access personal information; and we provide
+            security and privacy protection training to strengthen employees' awareness of the importance of protecting
+            personal information.</p>
+
+          <p><strong>2.</strong> We maintain an advanced, data-centric security management system that covers the full
+            data lifecycle and enhances system security across multiple dimensions, including organizational structure,
+            policy design, personnel management, and product/technical controls.</p>
+
+          <p><strong>3.</strong> We will take reasonable and practicable measures to ensure that we do not collect
+            irrelevant personal information. We will retain your personal information only for the period necessary to
+            fulfill the purposes described in this Policy, unless an extension is required or permitted by law.</p>
+
+          <p><strong>4.</strong> The Internet is not an absolutely secure environment. We strongly recommend that you do
+            not send personal information via communication channels that are not recommended by the App. You may use
+            our services to connect and share with others. When you create communications, transactions, or shares
+            through our services, you may independently choose the parties with whom you communicate, transact, or
+            share—who may then view related information such as your transaction content, contact details,
+            communications, or shared content.</p>
+
+          <p>If you discover that your personal information—especially your account or password—has been compromised,
+            please contact the App’s customer service immediately so that we can take appropriate measures upon your
+            request.</p>
+
+          <p><strong>Please note that information you voluntarily share—or even make public—when using our services may
+              involve your or others’ personal information, including sensitive personal information (e.g., uploading
+              images containing personal data in posts, group chats, or public forums). Please carefully consider
+              whether to share or publicly disclose such information.</strong></p>
+          <p>Please use a complex password to help keep your account secure. We will use our best efforts to protect the
+            security of any information you send us. We will also report the handling of personal information security
+            incidents to regulators as required. <strong>While we will do our utmost to protect your personal
+              information, please understand that no security measure is absolutely risk-free.</strong></p>
+
+
+          <!-- <div class="highlight">
+                        <p class="mark">Please note:</p>
+                        <p>Information you voluntarily share—or even make public—when using our services may involve your or others' personal information, including sensitive personal information (e.g., uploading images containing personal data in posts, group chats, or public forums). Please carefully consider whether to share or publicly disclose such information.</p>
+                    </div> -->
+        </div>
+      </div>
+
+      <div class="section" id="privacy-manage">
+        <h2 class="lang-zh active">VIII. 您如何管理个人信息</h2>
+        <h2 class="lang-en">VIII. How You Can Manage Personal Information</h2>
+
+        <div class="lang-zh active">
+          <p>您可以通过以下方式查阅和管理您的信息,我们会在符合法律法规要求的情形下响应您的请求:</p>
+
+          <h3>1. 访问您的个人信息</h3>
+          <p>您有权访问您的个人信息,法律法规规定的例外情况除外。您可以通过以下方式自行访问您的个人信息:</p>
+
+          <p><strong>1.1 个人资料</strong>------如果您希望访问或编辑您个人资料中的出生年月日、职业、兴趣爱好以及手机号码其他资料等,您可以通过登录账户通过"我的"-"设置"中执行此类操作。</p>
+
+          <p><strong>1.2 授权使用</strong>------您可以登录账号通过点击右上角"设置"图标,点击"头像"-"设置",在授权选项中关闭或启用授权。</p>
+
+          <h3>2. 更正或补充您的个人信息</h3>
+          <p>当您发现我们处理的关于您的个人信息有错误时,您有权要求我们做出更正或补充。您可以通过本条"1、访问您的个人信息"中列明的方式提出更正或补充申请。</p>
+
+          <h3>3. 删除您的个人信息</h3>
+          <p>您可以通过本条"1、访问您的个人信息"中列明的方式删除您的部分个人信息。</p>
+
+          <p>在以下情形中,您可以通过客服向我们提出删除个人信息的请求:</p>
+
+          <ul class="no-bullet">
+            <li><strong>3.1</strong>如果我们处理个人信息的行为违反法律法规;</li>
+            <li><strong>3.2</strong>如果我们收集、使用您的个人信息,却未征得您的明确同意;</li>
+            <li><strong>3.3</strong>如果我们处理个人信息的行为严重违反了与您的约定;</li>
+            <li><strong>3.4</strong>如果您不再使用我们的产品或服务,或您注销了账号;</li>
+            <li><strong>3.5</strong>如果我们不再为您提供产品或服务。</li>
+          </ul>
+
+          <p>我们承诺在您提出请求后15个工作日内处理完成，若我们决定响应您的删除请求,我们还将同时尽可能通知从我们处获得您的个人信息的主体,并要求其及时删除（除法律法规另有规定,或这些主体已独立获得您的授权）。</p>
+
+          <p>
+            我们承诺在您提出请求后15个工作日内处理完成，当您或我们协助您删除相关信息后,因为使用的法律和安全技术限制,我们可能无法立即备份从备份系统之删除响应的信息,我们将安全地存储您的个人信息并限制对其的任何进一步的处理,直到备份可以清楚或实现匿名化。
+          </p>
+
+          <h3>4. 改变您授权同意的范围</h3>
+          <p>每个业务能需要一些基本的个人信息才能得以完成（见本隐私权政策"第一条"）。除此之外,对于额外个人信息的收集和使用,您可以联系本应用客服申请给予或收回您的授权同意。</p>
+
+          <div class="highlight">
+            <p class="mark">请注意:</p>
+            <p>
+              对于部分类型的个人信息,如实现本应用基本功能所必须的信息或者我们履行法律法规规定的义务所必须的信息,我们可能无法响应您改变授权范围的请求。当您撤回授权后,我们将不再处理相应的个人信息,但您撤回授权的决定,不会影响我们此前基于您的授权而开展的个人信息处理。
+            </p>
+          </div>
+
+          <h3>5. 约束信息系统自动决策</h3>
+          <p>在某些业务功能中,我们可能仅依据信息系统、算法等在内的非人工自动决策机制做出决定。如果这些决定显著影响您的合法权益,您可以通过客服联系我们。</p>
+
+          <h3>6. 响应您的上述请求</h3>
+          <p>为保障安全,您可能需要提供书面请求,或以其他方式证明您的身份。我们可能会先要求您验证自己的身份,然后再处理您的请求。</p>
+
+          <p>我们承诺在15个工作日内处理完成。如您不满意,还可以通过第十四章"如何联系我们"的方式发起投诉。</p>
+
+          <p>
+            对于您合理的请求,我们原则上不收取费用,但对多次重复、超出合理限度的请求,我们将视情收取一定成本费用。对于那些无端重复、需要过多技术手段（例如,需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者非常不切实际（例如,涉及备份磁带上存放的信息）的请求,我们可能会予以拒绝。
+          </p>
+
+          <p><strong>在以下情形中,按照法律法规要求,我们将无法响应您的请求:</strong></p>
+
+          <ul class="no-bullet">
+            <li><strong>6.1</strong>与个人信息控制者履行法律法规规定的义务相关的;</li>
+            <li><strong>6.2</strong>与国家安全、国防安全直接相关的;</li>
+            <li><strong>6.3</strong>与公共安全、公共卫生、重大公共利益直接相关的;</li>
+            <li><strong>6.4</strong>与刑事侦查、起诉、审判和执行判决等直接相关的;</li>
+            <li><strong>6.5</strong>个人信息控制者有充分证据标明个人信息主体存在主管恶意或滥用权利的;</li>
+            <li><strong>6.6</strong>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的;</li>
+            <li><strong>6.7</strong>相应个人信息主体的请求将导致个人信息主体或其他个人、组织的合法权益收到严重损害的;</li>
+            <li><strong>6.8</strong>涉及商业秘密的。</li>
+          </ul>
+
+          <h3>7. 账号注销</h3>
+          <p>我们会保留您账户上的数据,保留期限为180天。如您不希望继续使用我们的产品,您可以通过"我的-设置-账号注销"向我们提交注销账号的申请。</p>
+
+          <p>在您主动注销账户之后,我们将停止为您提供产品或服务,并根据适用法律的要求删除或匿名化处理您的个人信息,因法律法规规定需要留存的除外。</p>
+
+          <p>如果您无法通过上述路径访问该等个人信息,您可以随时通过本应用客服与我们取得联系。我们将在15个工作日内回复您的访问请求。</p>
+
+          <p>对于您在使用我们的产品或服务过程中产生的其他个人信息,我们将根据本条"7、响应您的上述请求"中的相关安排向您提供访问支持。</p>
+
+          <h3>8. 个人信息的管理</h3>
+          <p><strong>请您理解,由于技术所限、法律或监管要求,我们可能无法满足您的所有要求,我们会在法律法规规定的期限内进行反馈。同时我们将不断优化产品和服务来保障您的权利。</strong></p>
+        </div>
+
+        <div class="lang-en">
+          <p>You can access and manage your information as described below, and we will respond to your requests when
+            required by applicable laws and regulations:</p>
+
+          <h3>1. Access Your Personal Information</h3>
+          <p><strong>You have the right to access your personal information, except as otherwise provided by laws and
+              regulations. You may access it as follows:</strong></p>
+
+          <p><strong>1.1 Profile</strong> — To access or edit your date of birth, occupation, interests, mobile phone
+            number, or other profile details, log in to your account and go to "Me" → "Settings."</p>
+
+          <p><strong>1.2 Authorizations —</strong> Log in, tap the "Settings" icon in the upper right, then "Avatar" →
+            "Settings," where you can disable or enable authorization options.</p>
+
+          <h3>2. Rectify or Supplement Your Personal Information</h3>
+          <p>If you discover inaccuracies in the personal information we process about you, you have the right to
+            request rectification or supplementation. You may submit such requests using the methods described under "1.
+            Access Your Personal Information."</p>
+
+          <h3>3. Delete Your Personal Information</h3>
+          <p>You may delete certain personal information via the methods described under "1. Access Your Personal
+            Information."</p>
+          <p>You may also request deletion via customer service in the following situations:</p>
+          <p>3.1 Our processing of personal information violates laws or regulations;</p>
+          <p>3.2 We collected or used your personal information without obtaining your explicit consent;</p>
+          <p>3.3 Our processing of personal information seriously violates our agreement with you;</p>
+          <p>3.4 You no longer use our products or services, or you have closed your account;</p>
+          <p>3.5 We no longer provide products or services to you.</p>
+          <p>If we decide to grant your deletion request, we will, where possible, notify entities that obtained your
+            personal information from us and request prompt deletion (unless otherwise required by law or where such
+            entities have independently obtained your authorization).</p>
+          <p>After you or we assist you in deleting the relevant information, due to legal and security technical
+            limitations, we may be unable to immediately remove the corresponding data from backup systems. We will
+            store your personal information securely and restrict further processing until backups can be cleared or
+            anonymized.</p>
+
+          <h3>4. Change the Scope of Your Consent</h3>
+          <p>Each business function requires certain basic personal information to be completed (see Section I of this
+            Privacy Policy). Beyond that, for additional collection and use of personal information, you may contact the
+            App's customer service to grant or withdraw your consent.</p>
+          <p><strong>Please note that for certain types of personal information—such as information necessary to realize
+              the App’s basic functions or to comply with legal obligations—we may be unable to accommodate your request
+              to change the scope of authorization. After you withdraw consent, we will cease processing the
+              corresponding personal information; however, your withdrawal will not affect prior processing carried out
+              based on your authorization/consent.</strong></p>
+
+          <!-- <div class="highlight">
+                        <p class="mark">Please note:</p>
+                        <p>For certain types of personal information—such as information necessary to realize the App's basic functions or to comply with legal obligations—we may be unable to accommodate your request to change the scope of authorization. After you withdraw consent, we will cease processing the corresponding personal information; however, your withdrawal will not affect prior processing carried out based on your authorization/consent.</p>
+                    </div> -->
+
+          <h3>5. Restricting Automated Decision-Making</h3>
+          <p>In certain business functions, we may make decisions solely through non-human automated decision-making
+            mechanisms, including information systems and algorithms. If such decisions significantly affect your lawful
+            rights and interests, you may contact customer service.</p>
+
+          <h3>6. Our Responses to Your Requests</h3>
+          <p>To protect security, you may need to provide a written request or otherwise verify your identity. We may
+            ask you to complete identity verification before processing your request.</p>
+          <p>We will reply within 30 days. If you are dissatisfied, you may file a complaint using the methods in
+            Section XIV “How to Contact Us.”</p>
+          <p>We generally do not charge for reasonable requests. For repeated or excessive requests, we may charge
+            reasonable costs. We may refuse requests that are unfounded, require disproportionate technical efforts
+            (e.g., building new systems or fundamentally changing current practices), risk others’ lawful rights and
+            interests, or are highly impracticable (e.g., involve data stored solely on backup tapes).</p>
+          <p><strong>In the following circumstances, as required by laws and regulations, we will be unable to respond
+              to your request:</strong></p>
+          <p><strong>6.1 Necessary for the personal information controller to fulfill statutory obligations;</strong>
+          </p>
+          <p><strong>6.2 Directly related to national security or national defense;</strong></p>
+          <p><strong>6.3 Directly related to public security, public health, or major public interests;</strong></p>
+          <p><strong>6.4 Directly related to criminal investigation, prosecution, trial, or enforcement of
+              judgments;</strong></p>
+          <p><strong>6.5 Where there is sufficient evidence that the data subject is acting in bad faith or abusing
+              rights;</strong></p>
+          <p><strong>6.6 To protect the life, property, or other major lawful rights and interests of the data subject
+              or other individuals where it is difficult to obtain consent;</strong></p>
+          <p><strong>6.7 Where responding to the request would cause serious damage to the lawful rights and interests
+              of the data subject or other individuals/organizations;</strong></p>
+          <p><strong>6.8 Where the request involves trade secrets.</strong></p>
+
+          <h3>7. Account Closure</h3>
+          <p>We will retain your account data for 180 days. If you no longer wish to use our products, you may submit an
+            account-closure request via "Me → Settings → Account Closure."</p>
+          <p>After you proactively close your account, we will stop providing products or services to you and will
+            delete or anonymize your personal information as required by applicable laws, except where retention is
+            required by law or regulation.</p>
+          <p>If you cannot access such personal information through the paths above, you may contact our customer
+            service at any time. We will respond to your access request within 15 business days.</p>
+          <p>For other personal information generated during your use of our products or services, we will provide
+            access support in accordance with the arrangements in Section 6 “Our Responses to Your Requests.”</p>
+
+
+          <h3>8. Management of Personal Information</h3>
+          <p>Please understand that due to technological limits and legal or regulatory requirements, we may be unable
+            to fulfill all requests. We will provide feedback within the time limits required by laws and regulations,
+            and we will continue to optimize our products and services to protect your rights.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-children">
+        <h2 class="lang-zh active">IX. 年龄限制和儿童保护</h2>
+        <h2 class="lang-en">IX. Age Restriction and Children Protection</h2>
+
+        <div class="lang-zh active">
+          <h3>1. 适用年龄范围</h3>
+          <ul>
+            <li><strong>欧盟/欧洲经济区（EU/EEA）:</strong>仅当您已满 16 周岁时方可使用本服务。我们不面向未满 16 周岁的个人提供服务,亦不主动收集其个人信息。</li>
+            <li><strong>其他国家/地区:</strong><strong>本服务的最低使用年龄为 13 周岁</strong>。我们不面向未满 13 周岁的个人提供服务,亦不主动收集其个人信息。</li>
+            <li><strong>更高标准优先:</strong>如您所在地法律对最低使用年龄或监护人同意设有更高或更严格的要求,则以该更高或更严格标准为准（例如:印度对未满 18 周岁情形、韩国对未满 14
+              周岁情形、中国大陆对未满 14 周岁儿童的特别保护要求等）。</li>
+          </ul>
+
+          <h3>2. 年龄核验与访问控制</h3>
+          <p>
+            为履行法律义务及保护未成年人权益,我们在注册或必要环节会收集出生日期用于年龄核验。若核验显示您未满足适用年龄要求,我们将拒绝注册或限制/停止提供服务。如因网络位置、迁居或信息不一致触发复核,我们可能要求您通过客户支持补充信息完成核验;在核验完成前,我们可限制或暂停相关功能。
+          </p>
+
+          <h3>3. 未成年人（已达最低使用年龄但未满 18 周岁）的数据处理与保护</h3>
+          <p>在不向"儿童"提供服务（EU/EEA:未满 16;非 EU:未满 13;中国大陆:未满 14）的前提下,对已达到最低使用年龄但未满 18 周岁的未成年人（例如 EU/EEA 的 16--17 岁、非 EU 的
+            13--17 岁、中国大陆的 14--17 岁）,我们将:</p>
+
+          <ol>
+            <li><strong>最小化与目的限定:</strong>仅在提供/维护服务所必要的范围内处理其个人信息,设置合理留存期限并采取安全保护措施。</li>
+            <li><strong>画像与追踪限制:</strong>不对未成年人实施基于画像的定向广告,并默认限制/关闭不必要的跨站追踪与精确定位（在 EU/UK 等法域适用更严格限制）。</li>
+            <li><strong>监护人同意（如地方法律要求）:</strong>如当地法律规定以"同意"为处理依据且需监护人同意,我们仅在取得并验证监护人同意后进行相应处理;未获同意的不处理。</li>
+            <li><strong>权利与救济:</strong>监护人可通过公示渠道行使访问、更正、删除、撤回同意等权利;一经核实属于不达最低使用年龄的儿童,我们将停用账户并删除信息。</li>
+          </ol>
+
+          <h3>4. 中国大陆地区特别说明</h3>
+          <ul>
+            <li><strong>儿童定义与适用范围:</strong>依据《个人信息保护法》等,中国大陆将未满 14 周岁的自然人定义为儿童。我们不面向未满 14
+              周岁的个人提供服务,亦不主动收集其个人信息。若因误收集而获得儿童个人信息,我们将依法采取删除/去标识化、停用相关账户等处置,并在可行时通知监护人。</li>
+            <li><strong>儿童个人信息的特别保护:</strong>如因法律要求或经监护人发起的权利行使而需触及儿童个人信息处理（例如核实并删除）,我们将遵循:
+              <ol>
+                <li><strong>单独同意:</strong>就涉及儿童个人信息的处理,依法获取其监护人的"单独同意"并进行可验证;</li>
+                <li><strong>专门规则与告知:</strong>提供清晰、易懂的儿童个人信息保护说明及监护人告知;</li>
+                <li><strong>数据最小化与默认高隐私:</strong>严格最小化收集,默认关闭非必要的个性化推荐/精准广告、精确定位等高风险处理;</li>
+                <li><strong>安全与评估:</strong>建立专门的安全措施与人员安排,必要时开展个人信息保护影响评估（PIPIA）并留存处理记录;</li>
+                <li><strong>监护人权利:</strong>为监护人提供便捷渠道行使对儿童信息的访问、更正、删除、撤回同意等权利。</li>
+              </ol>
+            </li>
+            <li><strong>未成年人（14--17 周岁）:</strong>对中国大陆14--17
+              周岁未成年人个人信息的处理,我们将依照《未成年人保护法》《个人信息保护法》等适用法律,实施更严格的默认隐私设置、最小化收集与使用、限制画像与定向广告,并在法律要求时获取并验证监护人同意/共同同意后方可开展相关处理。
+            </li>
+          </ul>
+
+          <h3>5. 联系我们</h3>
+          <p>如您为父母或法定监护人,认为不满足上述适用年龄要求的未成年人向我们提供了个人信息或使用了本服务,请通过 <strong>buildmost03@yekalon.com</strong>
+            与我们联系。经核实后,我们将在适用法律允许范围内采取停用账户、删除相关个人信息等措施,并在法定期限内予以反馈。</p>
+        </div>
+
+        <div class="lang-en">
+          <h3>1. Applicable Age Thresholds</h3>
+          <ul>
+            <li><strong>EU/EEA: You may use the Services only if you are at least 16 years old.</strong> We do not
+              provide the Services to individuals under 16, nor do we knowingly collect their personal information.</li>
+            <li><strong>Other Countries/Regions: The minimum age to use the Services is 13.</strong> We do not provide
+              the Services to individuals under 13, nor do we knowingly collect their personal information.</li>
+            <li><strong>Higher Local Standards Prevail:</strong> <strong>If the laws of your location set a higher or
+                stricter minimum age or require parental/guardian consent, that higher/stricter standard
+                applies</strong> (e.g., India: under 18; Republic of Korea: under 14; Mainland China: special
+              protections for children under 14).</li>
+          </ul>
+
+          <h3>2. Age Verification and Access Controls</h3>
+          <p>To comply with legal obligations and protect minors, we may collect date of birth at registration or at
+            necessary stages for age verification. If verification shows you do not meet the applicable age requirement,
+            we will refuse registration or restrict/suspend the Services. If re-checks are triggered due to network
+            location, relocation, or inconsistent information, we may ask you to provide additional information via
+            customer support; until verification is complete, we may limit or pause relevant features.</p>
+
+          <h3>3. Processing and Protection of Minors’ Data (who meet the minimum use age but are under 18)</h3>
+          <p>Without providing the Services to “Children” (EU/EEA: under 16; non-EU: under 13; Mainland China: under
+            14), for minors who meet the minimum use age but are under 18 (e.g., EU/EEA: 16–17; non-EU: 13–17; Mainland
+            China: 14–17), we will:</p>
+          <ol>
+            <li><strong>Data Minimization and Purpose Limitation:</strong> Process personal information only to the
+              extent necessary to provide/maintain the Services, apply reasonable retention periods, and implement
+              security safeguards.</li>
+            <li><strong>Profiling and Tracking Limits:</strong> Do not conduct profile-based targeted advertising for
+              minors, and by default restrict/disable unnecessary cross-site tracking and precise location (stricter
+              limits apply in EU/UK and similar jurisdictions).</li>
+            <li><strong>Parental/Guardian Consent (where required by local law):</strong> Where "consent" is the lawful
+              basis and guardian consent is required, we will process only after obtaining and verifying such consent;
+              without consent, we will not process.</li>
+            <li><strong>Rights and Remedies:</strong> Guardians may exercise rights (access, rectification, deletion,
+              withdrawal of consent) via the published channels; upon verifying that an account belongs to a child below
+              the minimum age, we will disable the account and delete the information.</li>
+          </ol>
+
+          <h3>4. Mainland China—Special Notice</h3>
+          <ul>
+            <li><strong>Definition and Scope:</strong>Under the Personal Information Protection Law and related rules,
+              Mainland China defines natural persons under 14 as Children. We do not provide the Services to individuals
+              under 14, nor do we knowingly collect their personal information. If children’s personal information is
+              inadvertently collected, we will act in accordance with law to delete/de-identify it, disable related
+              accounts, and notify guardians where feasible.</li>
+
+            <li><strong>Special Protection for Children’s Personal Information:</strong>Where processing of children’s
+              personal information is required by law or initiated by a guardian’s rights request (e.g., verification
+              and deletion), we will follow:</li>
+            <p>1.Separate/Specific Consent: Obtain and verifiably record the guardian’s separate consent for processing
+              involving children’s personal information;</p>
+            <p>2.Dedicated Rules and Notices: Provide clear and understandable children’s privacy notices and guardian
+              disclosures;</p>
+            <p>3.Minimization and High-Privacy Defaults: Strictly minimize collection; by default disable non-essential
+              personalized recommendations/targeted ads and precise location;</p>
+            <p>4.Security and Assessments: Implement dedicated security measures and staffing; where necessary, conduct
+              a Personal Information Protection Impact Assessment (PIPIA) and retain processing records;</p>
+            <p>5.Guardian Rights: Provide convenient channels for guardians to exercise access, rectification, deletion,
+              and consent withdrawal.</p>
+            <li><strong>Minors Aged 14–17 (Mainland China):</strong>For processing personal information of minors aged
+              14–17, we will apply stricter default privacy settings, minimization, limits on profiling/targeted ads,
+              and, where required by law, obtain and verify guardian consent/joint consent before processing.</li>
+          </ul>
+
+
+          <h3>5. Contact Us</h3>
+          <p>If you are a parent or legal guardian and believe a minor who does not meet the applicable age threshold
+            has provided personal information to us or used the Services, please contact us at
+            <strong>buildmost03@yekalon.com</strong>. Upon verification, we will, to the extent permitted by applicable
+            law, disable the account, delete the related personal information, and provide feedback within the statutory
+            period.
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-global">
+        <h2 class="lang-zh active">X. 全球数据传输</h2>
+        <h2 class="lang-en">X. Global Data Transfers</h2>
+
+        <div class="lang-zh active">
+          <p>
+            <strong>我们将在中华人民共和国境内运营中收集和产生的个人信息存储在中国境内</strong>。仅在以下情形下,个人信息可能跨境存储或传输:依法有明确要求;已获得您的明确授权;您通过互联网进行跨境直播/发布动态等主动行为。发生跨境传输时,我们将依据本政策提供充分保护。
+          </p>
+          <p>对于从 EEA/UK/瑞士 等地区转移的个人数据,我们将采用被认可的传输机制（例如欧盟标准合同条款 SCCs、英国 IDTA 或其附加条款,或其他适用框架）,并结合必要的技术与组织措施（如加密与访问控制）。</p>
+        </div>
+
+        <div class="lang-en">
+          <p><strong>Personal information collected and generated during our operations within the People's Republic of
+              China (PRC) is stored within China.</strong> Personal information may be stored or transmitted across
+            borders only under the following circumstances: where explicitly required by law; where we have obtained
+            your explicit authorization; or where you engage in cross-border activities via the Internet (e.g., live
+            streaming/posting). When cross-border transfers occur, we will provide appropriate protection as described
+            in this Policy.</p>
+          <p>For personal data transferred from the EEA/UK/Switzerland, we will use recognized transfer mechanisms
+            (e.g., EU Standard Contractual Clauses (SCCs), the UK IDTA or its Addendum, or other applicable frameworks),
+            together with necessary technical and organizational measures (such as encryption and access controls).</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-updates">
+        <h2 class="lang-zh active">XI. 本隐私政策如何更新</h2>
+        <h2 class="lang-en">XI. How This Privacy Policy Is Updated</h2>
+
+        <div class="lang-zh active">
+          <p>
+            为向您提供更好的产品、服务与技术,我们可能因新增服务或流程变更而更新本政策,并在本页面发布所有变更。对于<strong>重大变更</strong>,我们将以更显著的方式提示<strong>（包括但不限于产品内红点或弹窗提醒,或在特定服务下发电子邮件详细说明变更内容）</strong>。未经您的明确同意,我们不会减损您在本政策项下的权利。<strong>重大变更包括但不限于:</strong>
+          </p>
+          <ul>
+            <li>服务模式发生重大变化（处理目的、处理的个人信息类型、使用方式等）;</li>
+            <li>所有权结构或组织架构重大变化（如业务调整、破产并购等）;</li>
+            <li>个人信息共享、转让或公开披露的主要对象发生变化;</li>
+            <li>您参与个人信息处理方面的权利及行使方式发生重大变化;</li>
+            <li>个人信息安全责任部门、联系方式及投诉渠道发生变化;</li>
+            <li>个人信息安全影响评估显示存在高风险等。</li>
+          </ul>
+          <p>在部分地区（如 EEA/UK）如法律要求分层或本地化通知,我们将提供相应的区域化变更通知。我们亦会在应用内专门页面保存本政策旧版本供您查阅。</p>
+        </div>
+
+        <div class="lang-en">
+          <p>To provide better products, services, and technologies, we may update this Policy due to new services or
+            process changes and will publish all changes on this page. For <strong>material changes</strong>, we will
+            provide more prominent notice <strong>(including but not limited to in-product badges or pop-up reminders,
+              or emails under specific services detailing the changes)</strong>. We will not diminish your rights under
+            this Policy without your explicit consent.</p>
+          <p><strong>Material changes include, without limitation:</strong></p>
+          <ul>
+            <li>Significant changes to the service model (purposes of processing, types of personal information
+              processed, methods of use, etc.);</li>
+            <li>Major changes in ownership structure or organizational structure (e.g., business adjustments,
+              bankruptcy, or mergers and acquisitions);</li>
+            <li>Changes to the primary recipients of personal information for sharing, transfer, or public disclosure;
+            </li>
+            <li>Significant changes to your rights in personal information processing or how those rights may be
+              exercised;</li>
+            <li>Changes to the department responsible for personal information security, contact information, or
+              complaint channels;</li>
+            <li>Personal information security impact assessments indicating high risk.</li>
+          </ul>
+          <p>In certain regions (e.g., EEA/UK), where layered or localized notices are required by law, we will provide
+            corresponding regional notices. We will also maintain prior versions of this Policy on a dedicated in-App
+            page for your review.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-language">
+        <h2 class="lang-zh active">XII. 语言版本和冲突</h2>
+        <h2 class="lang-en">XII. Language Versions and Conflicts</h2>
+
+        <div class="lang-zh active">
+          <p>为便利阅读,本政策可能提供多语言版本。如不同语言文本存在不一致或歧义,以与您所在地区适用法律最贴近、并在发布页面标注为"生效文本"的版本为准。涉及强制性本地法律的,以该地法律规则及地区附录为先。</p>
+        </div>
+
+        <div class="lang-en">
+          <p>For ease of reading, this Policy may be provided in multiple languages. In the event of inconsistency or
+            ambiguity among different language versions, the version most aligned with the applicable laws of your
+            location and marked on the publication page as the "Effective Version" shall prevail. Where mandatory local
+            laws apply, such laws and any Regional Addendum take precedence.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-complaints">
+        <h2 class="lang-zh active">XIII. 数据保护官/代表和投诉</h2>
+        <h2 class="lang-en">XIII. Data Protection Officer/Representative and Complaints</h2>
+
+        <div class="lang-zh active">
+          <p>在适用法律要求下,我们将提供<strong>数据保护官（DPO）</strong>联系方式,及/或在 <strong>EEA/UK</strong>
+            指定代表的联系方式。您亦可以向您所在地具有管辖权的<strong>数据保护监管机构</strong>投诉或寻求救济。相关信息将展示于本政策"<strong>如何联系我们</strong>"或对应<strong>地区附录</strong>。
+          </p>
+        </div>
+
+        <div class="lang-en">
+          <p>Where required by applicable law, we will provide the contact details of our Data Protection Officer (DPO)
+            and/or our designated representative in the EEA/UK. You may also lodge a complaint with, or seek redress
+            from, the data protection supervisory authority having jurisdiction in your location. Relevant information
+            will be displayed in "How to Contact Us" below or in the applicable Regional Addendum.</p>
+        </div>
+      </div>
+
+      <div class="section" id="privacy-contact">
+        <h2 class="lang-zh active">XIV. 如何联系我们</h2>
+        <h2 class="lang-en">XIV. How to Contact Us</h2>
+
+        <div class="lang-zh active">
+          <p>您可通过以下方式与我们联系:</p>
+
+          <ol>
+            <li>小程序客服及 APP 中"我的---联系客服";</li>
+            <li>邮寄:深圳市龙岗区吉华街道甘李二路 9 号金苹果创新园 B 栋第 3 层;电话:+86-159-8666-3728;</li>
+            <li>电子邮箱:<strong>buildmost03@yekalon.com</strong>。</li>
+          </ol>
+          <p>我们将尽快审核所涉问题,并在<strong>15个工作日</strong>内回复您的请求。</p>
+
+          <div class="contact-info">
+            <h3>隐私政策说明</h3>
+            <p>
+              本隐私政策由燕加隆家居建材股份有限公司制定并解释。我们保留根据法律法规变化和业务发展需要对本隐私政策进行适时修订的权利,修订后的隐私政策将在BMostChat平台公布。如您对本隐私政策有任何疑问或建议,请通过上述联系方式与我们联系。
+            </p>
+          </div>
+        </div>
+
+        <div class="lang-en">
+          <p>You may contact us through the following channels:</p>
+
+          <ol>
+            <li>In-App Support: Mini-program customer service and, in the App, "Me → Contact Customer Service";</li>
+            <li>Mailing Address & Phone: 3/F, Building B, Golden Apple Innovation Park, No. 9 Ganli 2nd Road, Jihua
+              Sub-district, Longgang District, Shenzhen, China; Tel: +86-159-8666-3728;</li>
+            <li>Email: <strong>buildmost03@yekalon.com</strong>.</li>
+          </ol>
+
+          <!-- <p>We will review the issues involved as soon as possible and respond to your request within <strong>15 days</strong>.</p> -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="lang-zh active">© 2025 BMostChat. 保留所有权利。</p>
+      <p class="lang-en">© 2025 BMostChat. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <a href="#" class="back-to-top">↑</a>
+
+  <script>
+    // 语言切换功能
+    document.querySelectorAll('.lang-btn').forEach(button => {
+      button.addEventListener('click', function () {
+        // 移除所有按钮的active类
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+
+        // 添加active类到当前按钮
+        this.classList.add('active');
+
+        // 获取选择的语言
+        const lang = this.getAttribute('data-lang');
+
+        // 隐藏所有语言内容
+        document.querySelectorAll('.lang-zh, .lang-en').forEach(element => {
+          element.classList.remove('active');
+        });
+
+        // 显示选择的语言内容
+        document.querySelectorAll(`.lang-${lang}`).forEach(element => {
+          element.classList.add('active');
+        });
+      });
+    });
+
+    // 平滑滚动到锚点链接
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // 显示/隐藏回到顶部按钮
+    window.addEventListener('scroll', function () {
+      const backToTopButton = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'flex';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    // 回到顶部功能
+    document.querySelector('.back-to-top').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滚动
+      });
+    });
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     document.querySelector('.lang-btn[data-lang="zh"]').classList.remove('active');
+    //     document.querySelector('.lang-btn[data-lang="en"]').classList.add('active');
+    //     document.querySelectorAll('.lang-zh').forEach(element => {
+    //         element.classList.remove('active');
+    //     });
+    //     document.querySelectorAll('.lang-en').forEach(element => {
+    //         element.classList.add('active');
+    //     });
+    // });
+
+    // SDK表格H5移动端适配 - 动态添加data-label属性
+    document.querySelectorAll('.sdk-table').forEach(table => {
+      const headers = [];
+      table.querySelectorAll('thead th').forEach(th => {
+        headers.push(th.textContent.trim());
+      });
+
+      table.querySelectorAll('tbody tr').forEach(row => {
+        if (row.classList.contains('sdk-section-title')) return;
+
+        row.querySelectorAll('td').forEach((td, index) => {
+          if (headers[index]) {
+            td.setAttribute('data-label', headers[index]);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

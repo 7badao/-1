@@ -1030,14 +1030,14 @@
                   <td colspan="7">Core Framework SDKs</td>
                 </tr>
                 <tr>
-                  <td>DCloud uni-app</td>
+                  <td>DCloud App Engine</td>
                   <td>io.dcloud</td>
                   <td>DCloud</td>
-                  <td>Core modules</td>
+                  <td>The main engine that supports this App. Without this engine, the App cannot function. Used to diagnose performance and issues under various conditions</td>
                   <td>
                     Internet Access, Read Phone State, Access Network State, Access WiFi State, Read/Write External Storage
                   </td>
-                  <td>Device info (IMEI, MAC, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID); Network info (BSSID)</td>
+                  <td>Device info (brand & model, CPU type, screen parameters, OS name & version, network type, IP address, User Agent, device language, timezone, emulator/root status, anonymous device ID, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID, BSSID); App info (app name, package name, version, AppId, SDK info); crash stack traces; engine startup time & memory usage</td>
                   <td><a href="https://dcloud.io/license/appprivacy.html" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1181,9 +1181,9 @@
                     com.bun.miitmdid<br>com.zui.opendeviceidlibrary<br>com.netease.nis<br>com.samsung.android<br>com.huawei.hms
                   </td>
                   <td>Mobile Security Alliance</td>
-                  <td>Obtain OAID</td>
+                  <td>Obtain OAID, VAID, AAID device identifiers, identify device brand for API calls, detect virtual machine environment, determine same developer when generating VAID</td>
                   <td>None</td>
-                  <td>Device info</td>
+                  <td>Device info (manufacturer, model, brand, carrier name), App info (package name, signature, or APPID in app store), Open anonymous device identifiers (OAID, VAID, AAID)</td>
                   <td><a href="http://www.msa-alliance.cn/col.jsp?id=122" target="_blank">View</a></td>
                 </tr>
                 <tr class="sdk-section-title">
@@ -1197,44 +1197,17 @@
                   <td>
                     Internet Access, Access Network State, Access WiFi State, Access Coarse Location, Access Fine Location, Read Phone State, Read/Write External Storage
                   </td>
-                  <td>Location (coordinates), device info (IDFA, Android ID, OAID, IMEI, MAC), network info (IP)</td>
+                  <td>Location (coordinates), device info (IDFA, Android ID, OAID, IMEI, MAC, IMSI, SIM ICCID), network info (IP, WiFi list, WiFi signal strength, WiFi gateway, SSID, BSSID, cell tower info), sensor info (vector, acceleration, pressure), device signal strength</td>
                   <td><a href="https://lbs.amap.com/pages/privacy/" target="_blank">View</a></td>
                 </tr>
                 <tr>
                   <td>Tencent Maps SDK</td>
                   <td>com.tencent.map</td>
                   <td>Tencent</td>
-                  <td>H5 map display, location services</td>
+                  <td>H5 map display</td>
                   <td>Internet Access, Access Network State, Access WiFi State, Read/Write External Storage</td>
-                  <td>Location info, device info</td>
-                  <td><a href="https://lbs.qq.com/terms.html" target="_blank">View</a></td>
-                </tr>
-                <tr>
-                  <td>iFlytek Speech Recognition</td>
-                  <td>com.iflytek</td>
-                  <td>iFlytek Co., Ltd.</td>
-                  <td>Voice-to-text conversion</td>
-                  <td>Internet Access, Record Audio, Read Phone State</td>
-                  <td>Voice data, device info</td>
-                  <td><a href="https://www.xfyun.cn/doc/policy/privacy.html" target="_blank">View</a></td>
-                </tr>
-                <tr>
-                  <td>Microsoft Translator</td>
-                  <td>com.microsoft.translator</td>
-                  <td>Microsoft Corporation</td>
-                  <td>Text translation</td>
-                  <td>Internet Access</td>
-                  <td>Text content, language preferences</td>
-                  <td><a href="https://www.microsoft.com/zh-cn/privacy/privacystatement" target="_blank">View</a></td>
-                </tr>
-                <tr>
-                  <td>Huawei Cloud OBS</td>
-                  <td>com.huaweicloud.obs</td>
-                  <td>Huawei Cloud</td>
-                  <td>File storage (images, videos, files)</td>
-                  <td>Internet Access, Read/Write External Storage</td>
-                  <td>Uploaded files, file metadata</td>
-                  <td><a href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank">View</a></td>
+                  <td>Location info, device info (including device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), Network info (IP address)</td>
+                  <td><a href="https://privacy.qq.com/document/preview/dbd484ce652c486cb6d7e43ef12cefb0" target="_blank">View</a></td>
                 </tr>
                 <tr class="sdk-section-title">
                   <td colspan="7">Operational SDKs</td>
@@ -1246,7 +1219,7 @@
                   <td>Push notifications</td>
                   <td>Internet Access, Access Network State, Access WiFi State, Read Phone State, Vibrate, Get Tasks
                   </td>
-                  <td>Device info (IMEI, OAID, MAC, ANDROID_ID, model, OS version), app list, network info (IP, WIFI, BSSID)
+                  <td>Device info (platform, manufacturer, brand, model, OS version, device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), app list, network info (IP, WIFI, BSSID, carrier info, DHCP)
                   </td>
                   <td><a href="http://docs.getui.com/privacy" target="_blank">View</a></td>
                 </tr>
@@ -1255,8 +1228,8 @@
                   <td>com.huawei.hms</td>
                   <td>Huawei Technologies Co., Ltd.</td>
                   <td>Push notifications</td>
-                  <td>Internet Access, Access Network State, Request Install Packages</td>
-                  <td>Device info, app info, message delivery records</td>
+                  <td>Internet Access, Access Network State, Access WiFi State</td>
+                  <td>Device info (model, OS, system settings, device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), Network info (IP address, WiFi info, BSSID, carrier info), App info</td>
                   <td><a
                       href="https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides/sdk-data-security-0000001050042177"
                       target="_blank">View</a></td>
@@ -1267,7 +1240,7 @@
                   <td>Xiaomi Inc.</td>
                   <td>Push notifications</td>
                   <td>Internet Access, Access Network State, Access WiFi State</td>
-                  <td>Device info, OAID, app info</td>
+                  <td>Device info (model, OS, system settings, device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), Network info (IP address, WiFi info, BSSID, carrier info), App info</td>
                   <td><a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1275,8 +1248,8 @@
                   <td>com.vivo.push</td>
                   <td>Vivo Mobile Communication Co., Ltd.</td>
                   <td>Push notifications</td>
-                  <td>Internet Access</td>
-                  <td>Device info, app info</td>
+                  <td>Internet Access, Access Network State, Access WiFi State</td>
+                  <td>Device info (model, OS, system settings, device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), Network info (IP address, WiFi info, BSSID, carrier info), App info</td>
                   <td><a href="https://dev.vivo.com.cn/documentCenter/doc/366" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1284,8 +1257,8 @@
                   <td>com.heytap.msp</td>
                   <td>Guangdong OPPO Mobile Telecommunications Corp., Ltd.</td>
                   <td>Push notifications</td>
-                  <td>Internet Access</td>
-                  <td>Device info, app info</td>
+                  <td>Internet Access, Access Network State, Access WiFi State</td>
+                  <td>Device info (model, OS, system settings, device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), Network info (IP address, WiFi info, BSSID, carrier info), App info</td>
                   <td><a href="https://open.oppomobile.com/wiki/doc#id=10288" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1293,8 +1266,8 @@
                   <td>com.meizu.cloud.pushsdk</td>
                   <td>Zhuhai Meizu Technology Co., Ltd.</td>
                   <td>Push notifications</td>
-                  <td>Internet Access, Read Phone State</td>
-                  <td>Device info, app info</td>
+                  <td>Internet Access, Access Network State, Access WiFi State</td>
+                  <td>Device info (model, OS, system settings, device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM card info ICCID), Network info (IP address, WiFi info, BSSID, carrier info), App info</td>
                   <td><a href="https://www.meizu.com/legal.html" target="_blank">View</a></td>
                 </tr>
                 <tr class="sdk-section-title">

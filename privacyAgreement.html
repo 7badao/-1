@@ -908,14 +908,16 @@
                   <td colspan="7">基础框架SDK</td>
                 </tr>
                 <tr>
-                  <td>DCloud uni-app</td>
+                  <td>DCloud App引擎</td>
                   <td>io.dcloud</td>
                   <td>数字天堂（北京）网络技术有限公司</td>
-                  <td>应用核心模块</td>
+                  <td>运行支持本App的主引擎，缺少本引擎将导致本App无法使用和排查在不同情况下的性能和故障</td>
                   <td>
                     访问网络、读取电话状态、访问网络状态、访问WIFI状态、读写外部存储
                   </td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（BSSID）</td>
+                  <td>设备信息（设备品牌及型号、CPU类型、屏幕参数、操作系统名称及版本、网络类型、IP地址、User
+                    Agent信息、设备语言、时区、设备是否为模拟器或已被root、匿名设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID、BSSID）、应用信息（应用名、应用包名、版本、AppId、包含的SDK信息）、报错时的堆栈信息、引擎启动时间和内存消耗
+                  </td>
                   <td><a href="https://dcloud.io/license/appprivacy.html" target="_blank">查看</a></td>
                 </tr>
                 <tr>
@@ -1059,9 +1061,16 @@
                     com.bun.miitmdid<br>com.zui.opendeviceidlibrary<br>com.netease.nis<br>com.samsung.android<br>com.huawei.hms
                   </td>
                   <td>移动安全联盟</td>
-                  <td>获取OAID</td>
+                  <td>
+                    判断终端品牌调用接口，
+                    判断是否为虚拟机环境，
+                    生成VAID时判断是否为同一开发者，
+                    提供不同移动智能终端开放匿名设备标识符（OAID），提供不同移动智能终端开发者匿名设备标识符（VAID）,提供不同移动智能终端应用匿名设备标识符（AAID）
+                  </td>
                   <td>无</td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）</td>
+                  <td>
+                    设备信息（设备制造商、设备型号、设备品牌、网络运营商名称）、应用信息（App包名及签名信息,或在对应应用商店的APPID）、开放匿名设备标识符（OAID、VAID、AAID）
+                  </td>
                   <td><a href="http://www.msa-alliance.cn/col.jsp?id=122" target="_blank">查看</a></td>
                 </tr>
                 <tr class="sdk-section-title">
@@ -1075,7 +1084,8 @@
                   <td>
                     访问网络、访问网络状态、访问WIFI状态、获取粗略位置、获取精确位置、读取电话状态、读写外部存储
                   </td>
-                  <td>位置信息（经纬度）、设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址）
+                  <td>
+                    位置信息（经纬度）、设备信息（设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SIM卡信息ICCID）、网络信息（IP地址、WiFi列表、WiFi信号强度、WiFi网关地址、SSID、BSSID、基站信息）、传感器信息（矢量、加速度、压力）、设备信号强度信息
                   </td>
                   <td><a href="https://lbs.amap.com/pages/privacy/" target="_blank">查看</a></td>
                 </tr>
@@ -1083,37 +1093,11 @@
                   <td>腾讯地图SDK</td>
                   <td>com.tencent.map</td>
                   <td>深圳市腾讯计算机系统有限公司</td>
-                  <td>H5端地图展示、位置服务</td>
+                  <td>H5端地图展示、地图服务</td>
                   <td>访问网络、访问网络状态、访问WIFI状态、读写外部存储</td>
-                  <td>位置信息、设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）</td>
-                  <td><a href="https://lbs.qq.com/terms.html" target="_blank">查看</a></td>
-                </tr>
-                <tr>
-                  <td>科大讯飞语音识别</td>
-                  <td>com.iflytek</td>
-                  <td>科大讯飞股份有限公司</td>
-                  <td>语音消息转文字</td>
-                  <td>访问网络、录音、读取电话状态</td>
-                  <td>语音数据、设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）</td>
-                  <td><a href="https://www.xfyun.cn/doc/policy/privacy.html" target="_blank">查看</a></td>
-                </tr>
-                <tr>
-                  <td>微软翻译服务</td>
-                  <td>com.microsoft.translator</td>
-                  <td>微软（中国）有限公司</td>
-                  <td>消息文本翻译</td>
-                  <td>访问网络</td>
-                  <td>待翻译的文本内容、语言偏好设置</td>
-                  <td><a href="https://privacy.microsoft.com/zh-cn/privacystatement" target="_blank">查看</a></td>
-                </tr>
-                <tr>
-                  <td>华为云OBS存储</td>
-                  <td>com.huaweicloud.obs</td>
-                  <td>华为云计算技术有限公司</td>
-                  <td>图片、视频、文件存储</td>
-                  <td>访问网络、读写外部存储</td>
-                  <td>用户上传的文件内容、文件元数据</td>
-                  <td><a href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank">查看</a></td>
+                  <td>位置信息、设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址）</td>
+                  <td><a href="https://privacy.qq.com/document/preview/dbd484ce652c486cb6d7e43ef12cefb0"
+                      target="_blank">查看</a></td>
                 </tr>
                 <tr class="sdk-section-title">
                   <td colspan="7">运营保障SDK</td>
@@ -1126,7 +1110,7 @@
                   <td>访问网络、访问网络状态、访问WIFI状态、读取电话状态、振动、获取任务列表
                   </td>
                   <td>
-                    设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用安装列表、网络信息（IP地址、WIFI信息、BSSID）
+                    设备信息（设备平台、设备厂商、设备品牌、设备型号、系统版本、设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用安装列表、网络信息（IP地址、WIFI信息、BSSID、运营商信息、DHCP）
                   </td>
                   <td><a href="http://docs.getui.com/privacy" target="_blank">查看</a></td>
                 </tr>
@@ -1135,8 +1119,10 @@
                   <td>com.huawei.hms</td>
                   <td>华为技术有限公司</td>
                   <td>消息推送通知</td>
-                  <td>访问网络、访问网络状态、请求安装应用</td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用信息、消息下发记录</td>
+                  <td>访问网络、访问网络状态、访问WIFI状态</td>
+                  <td>
+                    设备信息（设备型号、操作系统、系统设置、设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址、WIFI信息、BSSID、运营商信息）、应用信息
+                  </td>
                   <td><a
                       href="https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides/sdk-data-security-0000001050042177"
                       target="_blank">查看</a></td>
@@ -1147,7 +1133,9 @@
                   <td>小米科技有限责任公司</td>
                   <td>消息推送通知</td>
                   <td>访问网络、访问网络状态、访问WIFI状态</td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用信息</td>
+                  <td>
+                    设备信息（设备型号、操作系统、系统设置、设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址、WIFI信息、BSSID、运营商信息）、应用信息
+                  </td>
                   <td><a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank">查看</a></td>
                 </tr>
                 <tr>
@@ -1155,8 +1143,10 @@
                   <td>com.vivo.push</td>
                   <td>维沃移动通信有限公司</td>
                   <td>消息推送通知</td>
-                  <td>访问网络</td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用信息</td>
+                  <td>访问网络、访问网络状态、访问WIFI状态</td>
+                  <td>
+                    设备信息（设备型号、操作系统、系统设置、设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址、WIFI信息、BSSID、运营商信息）、应用信息
+                  </td>
                   <td><a href="https://dev.vivo.com.cn/documentCenter/doc/366" target="_blank">查看</a></td>
                 </tr>
                 <tr>
@@ -1164,8 +1154,10 @@
                   <td>com.heytap.msp</td>
                   <td>广东欧珀移动通信有限公司</td>
                   <td>消息推送通知</td>
-                  <td>访问网络</td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用信息</td>
+                  <td>访问网络、访问网络状态、访问WIFI状态</td>
+                  <td>
+                    设备信息（设备型号、操作系统、系统设置、设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址、WIFI信息、BSSID、运营商信息）、应用信息
+                  </td>
                   <td><a href="https://open.oppomobile.com/wiki/doc#id=10288" target="_blank">查看</a></td>
                 </tr>
                 <tr>
@@ -1173,8 +1165,10 @@
                   <td>com.meizu.cloud.pushsdk</td>
                   <td>珠海市魅族科技有限公司</td>
                   <td>消息推送通知</td>
-                  <td>访问网络、读取电话状态</td>
-                  <td>设备信息（包括设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、应用信息</td>
+                  <td>访问网络、访问网络状态、访问WIFI状态</td>
+                  <td>
+                    设备信息（设备型号、操作系统、系统设置、设备标识符、IMEI、OAID、MAC、IDFA、ANDROID_ID、DEVICE_ID、IMSI、SSID、SIM卡信息ICCID）、网络信息（IP地址、WIFI信息、BSSID、运营商信息）、应用信息
+                  </td>
                   <td><a href="https://www.meizu.com/legal.html" target="_blank">查看</a></td>
                 </tr>
                 <tr class="sdk-section-title">
@@ -1343,14 +1337,18 @@
                   <td colspan="7">Core Framework SDKs</td>
                 </tr>
                 <tr>
-                  <td>DCloud uni-app</td>
+                  <td>DCloud App Engine</td>
                   <td>io.dcloud</td>
                   <td>DCloud</td>
-                  <td>Core modules</td>
+                  <td>The main engine that supports this App. Without this engine, the App cannot function. Used to
+                    diagnose performance and issues under various conditions</td>
                   <td>
                     INTERNET<br>READ_PHONE_STATE<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>WRITE_EXTERNAL_STORAGE
                   </td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID); Network info (BSSID)</td>
+                  <td>Device info (brand & model, CPU type, screen parameters, OS name & version, network type, IP
+                    address, User Agent, device language, timezone, emulator/root status, anonymous device ID, IMEI,
+                    OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID, BSSID); App info (app name, package
+                    name, version, AppId, SDK info); crash stack traces; engine startup time & memory usage</td>
                   <td><a href="https://dcloud.io/license/appprivacy.html" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1451,7 +1449,8 @@
                   <td>Mobile Security Alliance</td>
                   <td>Obtain OAID</td>
                   <td>None</td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID)</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID)</td>
                   <td><a href="http://www.msa-alliance.cn/col.jsp?id=122" target="_blank">View</a></td>
                 </tr>
                 <tr class="sdk-section-title">
@@ -1465,7 +1464,8 @@
                   <td>
                     INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>ACCESS_COARSE_LOCATION<br>ACCESS_FINE_LOCATION<br>READ_PHONE_STATE<br>WRITE_EXTERNAL_STORAGE
                   </td>
-                  <td>Location (coordinates), device info (IDFA, Android ID, OAID, IMEI, MAC), network info (IP)</td>
+                  <td>Location (coordinates), device info (IDFA, Android ID, OAID, IMEI, MAC), network info (IP), sensor
+                    info (vector, acceleration, pressure), device signal strength</td>
                   <td><a href="https://lbs.amap.com/pages/privacy/" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1474,35 +1474,10 @@
                   <td>Tencent</td>
                   <td>H5 map display, location services</td>
                   <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>WRITE_EXTERNAL_STORAGE</td>
-                  <td>Location info, device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID)</td>
-                  <td><a href="https://lbs.qq.com/terms.html" target="_blank">View</a></td>
-                </tr>
-                <tr>
-                  <td>iFlytek Speech Recognition</td>
-                  <td>com.iflytek</td>
-                  <td>iFlytek Co., Ltd.</td>
-                  <td>Voice-to-text conversion</td>
-                  <td>INTERNET<br>RECORD_AUDIO<br>READ_PHONE_STATE</td>
-                  <td>Voice data, device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID)</td>
-                  <td><a href="https://www.xfyun.cn/doc/policy/privacy.html" target="_blank">View</a></td>
-                </tr>
-                <tr>
-                  <td>Microsoft Translator</td>
-                  <td>com.microsoft.translator</td>
-                  <td>Microsoft Corporation</td>
-                  <td>Text translation</td>
-                  <td>INTERNET</td>
-                  <td>Text content, language preferences</td>
-                  <td><a href="https://www.microsoft.com/zh-cn/privacy/privacystatement" target="_blank">View</a></td>
-                </tr>
-                <tr>
-                  <td>Huawei Cloud OBS</td>
-                  <td>com.huaweicloud.obs</td>
-                  <td>Huawei Cloud</td>
-                  <td>File storage (images, videos, files)</td>
-                  <td>INTERNET<br>WRITE_EXTERNAL_STORAGE</td>
-                  <td>Uploaded files, file metadata</td>
-                  <td><a href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank">View</a></td>
+                  <td>Location info, device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI,
+                    SSID, SIM ICCID)</td>
+                  <td><a href="https://privacy.qq.com/document/preview/dbd484ce652c486cb6d7e43ef12cefb0"
+                      target="_blank">View</a></td>
                 </tr>
                 <tr class="sdk-section-title">
                   <td colspan="7">Operational SDKs</td>
@@ -1514,7 +1489,8 @@
                   <td>Push notifications</td>
                   <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE<br>READ_PHONE_STATE<br>VIBRATE<br>GET_TASKS
                   </td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID), app list, network info (IP, WIFI)</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID), app list, network info (IP, WIFI)</td>
                   <td><a href="http://docs.getui.com/privacy" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1523,7 +1499,8 @@
                   <td>Huawei Technologies Co., Ltd.</td>
                   <td>Push notifications</td>
                   <td>INTERNET<br>ACCESS_NETWORK_STATE<br>REQUEST_INSTALL_PACKAGES</td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID), app info, message delivery records</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID), app info, message delivery records</td>
                   <td><a
                       href="https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides/sdk-data-security-0000001050042177"
                       target="_blank">View</a></td>
@@ -1534,7 +1511,8 @@
                   <td>Xiaomi Inc.</td>
                   <td>Push notifications</td>
                   <td>INTERNET<br>ACCESS_NETWORK_STATE<br>ACCESS_WIFI_STATE</td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID), app info</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID), app info</td>
                   <td><a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1543,7 +1521,8 @@
                   <td>Vivo Mobile Communication Co., Ltd.</td>
                   <td>Push notifications</td>
                   <td>INTERNET</td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID), app info</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID), app info</td>
                   <td><a href="https://dev.vivo.com.cn/documentCenter/doc/366" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1552,7 +1531,8 @@
                   <td>Guangdong OPPO Mobile Telecommunications Corp., Ltd.</td>
                   <td>Push notifications</td>
                   <td>INTERNET</td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID), app info</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID), app info</td>
                   <td><a href="https://open.oppomobile.com/wiki/doc#id=10288" target="_blank">View</a></td>
                 </tr>
                 <tr>
@@ -1561,7 +1541,8 @@
                   <td>Zhuhai Meizu Technology Co., Ltd.</td>
                   <td>Push notifications</td>
                   <td>INTERNET<br>READ_PHONE_STATE</td>
-                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM ICCID), app info</td>
+                  <td>Device info (device identifier, IMEI, OAID, MAC, IDFA, ANDROID_ID, DEVICE_ID, IMSI, SSID, SIM
+                    ICCID), app info</td>
                   <td><a href="https://www.meizu.com/legal.html" target="_blank">View</a></td>
                 </tr>
                 <tr class="sdk-section-title">
@@ -2138,7 +2119,8 @@
           <h3>6. Our Responses to Your Requests</h3>
           <p>To protect security, you may need to provide a written request or otherwise verify your identity. We may
             ask you to complete identity verification before processing your request.</p>
-          <p>We will reply within 15 business days. If you are dissatisfied, you may file a complaint using the methods in
+          <p>We will reply within 15 business days. If you are dissatisfied, you may file a complaint using the methods
+            in
             Section XIV "How to Contact Us."</p>
           <p>We generally do not charge for reasonable requests. For repeated or excessive requests, we may charge
             reasonable costs. We may refuse requests that are unfounded, require disproportionate technical efforts

@@ -12,9 +12,6 @@
 | 腾讯地图 SDK | 深圳市腾讯计算机系统有限公司 | H5地图服务 | <https://lbs.qq.com> |
 | UniPush 推送 | 数字天堂（北京）网络技术有限公司 | 消息推送 | <https://dcloud.io> |
 | 华为推送 SDK | 华为技术有限公司 | 消息推送（华为通道） | <https://developer.huawei.com/consumer/cn/hms/huawei-pushkit/> |
-| 科大讯飞 | 科大讯飞股份有限公司 | 语音识别转写 | <https://www.xfyun.cn> |
-| 微软翻译 | 微软（中国）有限公司 | 文本翻译 | <https://azure.microsoft.com> |
-| 华为云 OBS | 华为云计算技术有限公司 | 文件存储 | <https://www.huaweicloud.com> |
 | DCloud 统计 | 数字天堂（北京）网络技术有限公司 | 应用统计分析 | <https://dcloud.io> |
 | KJ-VideoThumbnail | DCloud 插件市场第三方开发者 | 视频缩略图获取 | <https://ext.dcloud.net.cn/plugin?id=1577> |
 | KJ-Key | DCloud 插件市场第三方开发者 | 音量键监听(iOS) | <https://ext.dcloud.net.cn/plugin?id=11862> |
@@ -107,62 +104,7 @@
 
 ---
 
-### 2.5 科大讯飞语音识别
-
-**服务商**：科大讯飞股份有限公司
-
-**使用目的**：
-
-- 语音消息转文字功能
-- 提升用户沟通效率
-
-**收集的信息类型**：
-
-- 语音数据（用于语音识别）
-- 设备信息
-
-**隐私政策**：<https://www.xfyun.cn/doc/policy/privacy.html>
-
----
-
-### 2.6 微软翻译服务
-
-**服务商**：微软（中国）有限公司
-
-**使用目的**：
-
-- 消息文本翻译
-- 支持多语言沟通
-
-**收集的信息类型**：
-
-- 待翻译的文本内容
-- 语言偏好设置
-
-**隐私政策**：<https://privacy.microsoft.com/zh-cn/privacystatement>
-
----
-
-### 2.7 华为云 OBS 存储
-
-**服务商**：华为云计算技术有限公司
-
-**使用目的**：
-
-- 用户上传的图片、视频、文件存储
-- 多媒体文件处理（视频封面生成等）
-- 保障数据安全可靠
-
-**收集的信息类型**：
-
-- 用户上传的文件内容
-- 文件元数据（文件名、大小、类型）
-
-**隐私政策**：<https://www.huaweicloud.com/declaration/sa_prerta.html>
-
----
-
-### 2.8 DCloud 统计分析
+### 2.5 DCloud 统计分析
 
 **服务商**：数字天堂（北京）网络技术有限公司
 
@@ -182,7 +124,7 @@
 
 ---
 
-### 2.9 KJ-VideoThumbnail 视频缩略图插件
+### 2.6 KJ-VideoThumbnail 视频缩略图插件
 
 **服务商**：DCloud 插件市场第三方开发者
 
@@ -199,7 +141,7 @@
 
 ---
 
-### 2.10 KJ-Key 按键监听插件（仅 iOS）
+### 2.7 KJ-Key 按键监听插件（仅 iOS）
 
 **服务商**：DCloud 插件市场第三方开发者
 
